@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+$font-xsmall: 1.4em;
+$font-small: 1.8em;
+$font-medium: 2.4em;
+$font-big: 4.8em;
+$font-large: 7.2em;
+
+
+body {
+    background: $dark-tech;
+    font-family: $roboto;
+}
+
+
+header {
+    width: 100%;
+    min-height: 60px;
+}
+
+nav{
+    color: $inactive-green;
+    font-family: $roboto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: .5em;
+    font-size: $font-medium;
+}
+
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: $inactive-green;
+    
+    &:active{
+        color: $inactive-green;
+    }
+}
+
+h1,h2,h3{
+    font-family: $roboto;
+}
+
+h1{
+    font-size: $font-large;
+    color: $active-green;
+}
+
+h2{
+    font-size: $font-big;
+}
+

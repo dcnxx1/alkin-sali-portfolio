@@ -1,0 +1,22 @@
+.logo-container{
+    flex: 1;
+}
+
+
+
+.navigation-container{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1;
+
+    .nav-links{
+        transition: all .1s ease-in;
+        padding-bottom: .2px;
+        &:hover, &:focus{
+            color: $active-green;
+            border-bottom: .3px solid $active-green;
+        }
+    }
+}

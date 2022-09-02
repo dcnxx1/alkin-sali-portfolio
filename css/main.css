@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url(./Roboto-Light.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #002855;
+  font-family: "Roboto";
+}
+
+header {
+  width: 100%;
+  min-height: 60px;
+}
+
+nav {
+  color: #38B000;
+  font-family: "Roboto";
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 0.5em;
+  font-size: 2.4em;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #38B000;
+}
+a:active {
+  color: #38B000;
+}
+
+h1, h2, h3 {
+  font-family: "Roboto";
+}
+
+h1 {
+  font-size: 7.2em;
+  color: #70e000;
+}
+
+h2 {
+  font-size: 4.8em;
+}
+
+.logo-container {
+  flex: 1;
+}
+
+.navigation-container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-evenly;
+  flex: 1;
+}
+.navigation-container .nav-links {
+  transition: all 0.1s ease-in;
+  padding-bottom: 0.2px;
+}
+.navigation-container .nav-links:hover, .navigation-container .nav-links:focus {
+  color: #70e000;
+  border-bottom: 0.3px solid #70e000;
+}/*# sourceMappingURL=main.css.map */
