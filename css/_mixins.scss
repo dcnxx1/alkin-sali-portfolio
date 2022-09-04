@@ -1,0 +1,65 @@
+@mixin card{
+    width: 100%;
+    background: $card-blue;
+    color: $inactive-green;
+    font-size: $font-small;
+    padding: .5em;
+    border-radius: 10px;
+    min-height: 20%;
+    
+    p{
+        font-size: 1.8rem;
+        padding-bottom: 2rem;
+    }
+}
+
+
+
+
+@mixin rotateButton {
+    border: 2px solid $inactive-green;
+ 
+    background: transparent;
+    color: $inactive-green;
+    transition: all .2s ease-in;
+
+    &:hover{
+        color: $active-green;
+        border: 2px solid $active-green;
+    }
+}
+
+@mixin active-buttons{
+    border: 2px solid $active-green;
+    p{color: $active-green;}
+}
+
+@mixin dots{
+    width: 10px;
+    height: 10px;
+    display: block;
+    background: $inactive-green;
+    border-radius: 50%;
+    transition: background .3s ease;
+    &:hover{
+        background: $active-green;
+    }
+}
+
+@mixin proj-nav{
+    border: 2px solid $inactive-green;
+    padding: .4rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: all .3s ease-in;
+    min-width: 100px;
+    &:hover{
+        @include active-buttons;
+    }
+    img{
+        width: 20px;
+        height: 20px;
+    }
+}

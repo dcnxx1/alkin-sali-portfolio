@@ -9,6 +9,26 @@
     <script defer src="./js/script.js"></script>
 </head>
     <body>
+        <div class="project-page">
+          <div class="project-head">
+            <div class="project-escape">
+                <img class="escape-icon" src="./assets/icons/close(1).png" />
+                <p>Afsluiten</p>
+            </div>
+            <div class="project-nav">
+               <div class="nav-con">
+                    <div class="go-previous">
+                        <img src="./assets/icons/next(1).png"/>
+                        <p>Vorige</p>
+                    </div>
+                    <div class="go-next">
+                        <p>Volgende</p>
+                        <img src="./assets/icons/next(1).png"/>
+                    </div>
+               </div>
+            </div>
+          </div>
+        </div>
         <header>
             <nav>
                 <div class="logo-container">
@@ -25,10 +45,129 @@
         </header>
 
         <main>
-            <section>
+            <section class="introduction">
+                <div class="intro">
+                    <div class="intro-top">
+                        <h1>Hi,</h1> <br/>
+                        <h2>Mijn naam is Alkin</h2> <br/>
+                        <h2>Ik ben een full-stack ontwikkelaar</h2>
+                    </div>
+                    <div class="intro-bottom">
+                        <h3>Ik maak het internet een stukje mooier. </h3>
+                        <h3>Scroll even verder, dan leg ik je uit hoe ik dat doe</h3>
+                    </div>
+                </div>
+            </section>
+            <section class="about">
+                <div class="about-body">
+                    <div class="about-top">
+                        <h1>Over</h1>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <p>Hallo, ik ben <span>Alkin</span> en ik ben een ontwikkelaar uit <span>Nieuw-Vennep.</span> 
+                            Ik programmeer al bijna 3 jaar als <span>hobbyist</span>. 
+                            Ik begon met <span>webontwikkeling</span> in 2019 waarbij ik <span>HTML</span> en <span>CSS </span>
+                            begon te mengen om <span>websites</span> te creëren. Paar jaar later
+                            en ik ben trots om mijzelf een <span>full-stack developer</span> te erkennen. 
+                        </p>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <p>Mijn doel als ontwikkelaar is om het beste product naar buiten te brengen 
+                            met wensen van de klant als uitgangspunt.</p>
+                           
+                            <br/>
+                            <p>
+                            Ik doe dit door de meest moderne web-technieken te gebruiken. 
+                            Van websites maken to servers opzetten - ik doe het allemaal.
+                            Voor front-end gebruik ik React en als back-end gebruik ik NodeJS.
+                        </p>
+                    </div>
+                    <fieldset class="stack-container">
+                        <legend align="center"><p>Mijn stack</p></legend>
+                        <div class="card">
+                            <h3>AWS - Cloud computing</h3>
+                            <br/>
+                            <p>
+                                Ik gebruik cloud computing om mijn applicaties te hosten en 
+                                extra functionaliteiten toe te voegen. Zo maak ik microservices om bepaalde functies van een applicatie te isoleren.   
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>NodeJS - Back-end</h3>
+                            <br/>
+                            <p>
+                                Lichtgewicht, makkelijk, en doeltreffend.  NodeJS is mijn go-to
+                                programmeertaal om lichtgewichte applicaties te maken. Ik 
+                                gebruik NodeJS om front-end te verbinden met de back-end.    
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>React - Front-end</h3>
+                            <br/>
+                            <p>
+                                React en NodeJS zijn de perfecte combo om een full-stack
+                                applicatie te maken. Ik vind React de beste front-end framework om de hergebruikbare componenten.    
+                            </p>
+                        </div>
+                        <div class="card">
+                            <h3>Sass - Styling 💅</h3>
+                            <br/>
+                            <p>
+                                Ik kies SASS ofwel sassy css 😏 boven normale css om de extra kenmerken die het aanbiedt.     
+                            </p>
+                        </div>
+                    </fieldset>
+                </div>
+               
+            </section>
+            <section class="project">
+                
+                <div class="project-container">
+                    <h1>Projecten</h1>
 
+                    <div class="cover">
+                        <div class="cover-info">
+                            <img class="cover-img cover-qr" src="./assets/cover/qrcode/cover-desktop-qrcode.jpg" />
+                            <div class="cover-text">
+                                <p class="cover-expl">Verborgen informatie, links naar andere websites of een sms versturen via een foto met zwart-witte puntjes, kunnen alleen de slimste
+                                    techneuten hebben bedacht. Op QRCode Generator kun je kiezen tussen v-card, sms, text en een e-mail QRCode </p>
+                                <div class="cover-links">
+                                    <a class="cover-link git-front" href="https://github.com/dcnxx1/qrCode" target="_blank">
+                                        <img src="./assets/icons/githtml.png" alt="git github html logo Alkin Sali qrCode Generator" />
+                                        <p class="icon-text">Front-end source</p>
+                                    </a>
+                                    <a class="cover-link git-back" href="https://github.com/dcnxx1/qrcode-backend" target="_blank">
+                                        <img src="./assets/icons/gitserver.png" alt="git github server logo Alkin Sali qrCode Generator" />
+                                        <p class="icon-text">Back-end source</p>
+                                    </a>
+                                    <a class="cover-link live-web" href="https://qrcode-frnt.herokuapp.com/" target="_blank">
+                                        <img src="./assets/icons/live.png" alt="live www website github alkin Sali qrcode Generator">
+                                        <p class="icon-text"> Website</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mobile-cover">
+                                <div class="three-dots">
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                    <span class="dot"></span>
+                                </div>
+                                <p>Meer</p>
+                            </div>
+                        </div>
+                        <div class="cover-nav">
+                            <button class="radial-button" data-button="button1">1</button>
+                            <button class="radial-button" data-button="button2">2</button>
+                            <button class="radial-button" data-button="button3">3</button>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollToPlugin.min.js"></script>
     </body>
 </html>

@@ -1,0 +1,207 @@
+@import '../mixins';
+
+.project{
+
+    .project-page{
+        display: none;
+    }
+
+    .project-container{
+        width: 90%;
+        min-height: 80%; 
+          
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .cover{
+
+        .cover-info{
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            .cover-img{
+                min-width: 450px;
+                max-width: 800px;
+            }
+
+            .cover-text{
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                .cover-links{
+                    width: 100%;
+                    display: flex;
+                    gap: 1rem;
+                    flex-wrap: wrap;
+                    .cover-link{
+                        flex: 0 1 200px;
+                        border: 2px solid transparent;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        padding: .2rem;
+                        transition: all .2s ease;
+                        img{
+                            width: 45px;
+                        }
+                       
+                    }
+
+                    .git-front{
+                       
+                        &:hover{
+                           @include active-buttons;
+                            img {
+                               content: url(../../assets/icons/githtml-active.png);
+                            }
+                        }
+                    }
+
+                    .git-back{
+                        &:hover{
+                            @include active-buttons;
+                            img {
+                                content: url(../../assets/icons/gitserver-active.png);
+                            }
+                        }
+                    }
+                    
+                    .live-web{
+                        &:hover{
+                            @include active-buttons;
+                            img {
+                                content: url(../../assets/icons/live-active.png);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .mobile-cover{
+                display: none;
+            }
+        }
+
+        .cover-nav{
+            position: absolute;
+            bottom: 0px;
+            
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+            padding: 2rem;
+            .radial-button{
+                @include rotateButton;
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                cursor: pointer;
+                font-size: $font-small;
+            }
+        
+        }
+        
+    }
+    
+
+}
+
+@media screen and (max-width: 944px){
+    .project{
+        min-height: calc(900px - 1vh);
+    }
+    .project-container{
+        border: 2px solid white;
+        min-height: 95%;
+    }
+    .cover-info{
+        flex-direction: column;
+
+            .cover-img{
+                width: 25px;
+            }
+        }
+
+    .cover-text{
+        .cover-expl{
+            width: 70%;
+           
+            margin: 0 auto;
+        }
+        
+    }
+
+    .cover{
+       .cover-links{
+
+        justify-content: space-evenly;
+       }
+    }
+}
+
+@media screen and (max-width: 556px){
+    .cover-text{
+        .cover-expl{
+            width: 90%;
+        }
+    }
+}
+
+@media only screen and (max-width: 516px){
+ .project {
+    .cover{
+        margin-top: 1.2rem;
+        .cover-info{
+
+            .cover-qr{
+                content: url(../../assets/cover/qrcode/cover-qrcode-fixed.jpg);
+            }
+            .cover-img{
+                min-width: 250px;
+                max-width: 350px;
+            }
+            .cover-text{
+                display: none;
+            }
+            
+            .mobile-cover{
+                width: 20%;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                gap: .2rem;
+                text-align: center;
+                cursor: pointer;
+                .three-dots{
+                    
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: .6rem;
+                    .dot{
+                        @include dots;
+                    }
+                    span{
+                      
+                        &:hover{
+                            color: $active-green;
+                        }
+                    }
+                }
+            }
+        }
+
+        .cover-nav{
+            .radial-button{
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+ }
+}

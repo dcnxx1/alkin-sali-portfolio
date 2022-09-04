@@ -1,0 +1,39 @@
+@import '../mixins';
+.about{
+    display: none;
+    .about-body{
+        width: 90%;
+        min-height: 70%;
+        margin: 0 auto;
+        padding: .6rem;
+        
+        gap: 2rem;
+        display: flex;
+        .about-top{
+            flex: 1;
+
+        }
+
+        .stack-container{
+            flex: 1;
+            display: flex;
+            border: 2px solid $active-green;
+            border-radius: 10px;
+            padding: .5rem;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            gap: 1rem;
+            legend{padding: 0px 2em; p{ color: $active-green}}
+
+            .card{
+                @include card;
+                
+            }
+
+        }
+        
+    
+    }
+
+}

@@ -1,0 +1,60 @@
+@import '../mixins';
+
+.project-page{
+    position: absolute;
+    background: rgb(0, 0, 0, .9);
+    width: 100%;
+    min-height: 100%;
+    z-index: 10;
+    transform: translate(0px, -100%);
+    top: 0;bottom: 0;right: 0;left: 0;
+
+    .project-head{
+        display: flex;
+        justify-content: center;
+        height: 90px;
+        align-items: center;
+        border: 2px solid white;
+        width: 100%;
+        transition: border .3s ease-in;
+        
+        .project-escape{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            cursor: pointer;
+            padding: .6rem;
+            border: 2px solid $inactive-green;
+            transition: all .3s ease-in;
+            min-width: 100px;
+            .escape-icon{
+                width: 10px;
+                height: 10px;
+            }
+
+            &:hover{
+                @include active-buttons;
+            }
+        }
+
+        .project-nav{
+            flex: 1;
+            display: flex;
+            justify-content: right;
+            
+            .nav-con{
+                display: flex;  
+                gap: 2rem;
+                .go-previous{
+                    @include proj-nav;
+                    img {
+                        transform: rotate(180deg)
+                    }
+                }
+                .go-next{
+                    @include proj-nav;
+                }
+            }
+        }
+    }
+}

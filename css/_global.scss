@@ -11,6 +11,7 @@ html {
 $font-xsmall: 1.4em;
 $font-small: 1.8em;
 $font-medium: 2.4em;
+$font-medium-big: 3.4em ;
 $font-big: 4.8em;
 $font-large: 7.2em;
 
@@ -18,12 +19,22 @@ $font-large: 7.2em;
 body {
     background: $dark-tech;
     font-family: $roboto;
+    margin: 0 auto;
+    position: relative;
+}
+
+header, section, main {
+    max-width: 2500px;
 }
 
 
 header {
     width: 100%;
     min-height: 60px;
+    position: fixed;
+    background: $dark-tech;
+    top: 0px;
+    z-index: 5;
 }
 
 nav{
@@ -50,8 +61,10 @@ a{
     }
 }
 
-h1,h2,h3{
+h1,h2{
     font-family: $roboto;
+    color: $active-green;
+    font-weight: 500;
 }
 
 h1{
@@ -63,3 +76,55 @@ h2{
     font-size: $font-big;
 }
 
+h3{
+    font-family: $roboto;
+    color: $active-green;
+    font-weight: 400;
+}
+
+p{
+    font-size: $font-small;
+    color: $inactive-green;
+}
+span{
+    color: $active-green;
+}
+section{
+    height: 100vh;
+    min-height: calc(900px - 10vh);
+    align-items: center;
+    display: flex;
+}
+
+.project-page{
+    display: none;
+}
+
+@media screen and (max-width: 994px){
+    h1 {
+        font-size: calc($font-big - 1vw);
+    }
+    h2{
+
+    }
+    h3{
+
+    }
+    p{
+        font-size: $font-xsmall;
+    }
+}
+
+@media screen and (max-width: 516px){
+
+    .project-page{
+        display: flex;    
+    }
+    h1{
+        font-size: $font-medium-big;
+    }
+
+    h3{
+        font-size: 14pt;
+    }
+}

@@ -15,11 +15,21 @@ html {
 body {
   background: #002855;
   font-family: "Roboto";
+  margin: 0 auto;
+  position: relative;
+}
+
+header, section, main {
+  max-width: 2500px;
 }
 
 header {
   width: 100%;
   min-height: 60px;
+  position: fixed;
+  background: #002855;
+  top: 0px;
+  z-index: 5;
 }
 
 nav {
@@ -44,8 +54,10 @@ a:active {
   color: #38B000;
 }
 
-h1, h2, h3 {
+h1, h2 {
   font-family: "Roboto";
+  color: #70e000;
+  font-weight: 500;
 }
 
 h1 {
@@ -57,6 +69,51 @@ h2 {
   font-size: 4.8em;
 }
 
+h3 {
+  font-family: "Roboto";
+  color: #70e000;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1.8em;
+  color: #38B000;
+}
+
+span {
+  color: #70e000;
+}
+
+section {
+  height: 100vh;
+  min-height: calc(900px - 10vh);
+  align-items: center;
+  display: flex;
+}
+
+.project-page {
+  display: none;
+}
+
+@media screen and (max-width: 994px) {
+  h1 {
+    font-size: calc(4.8em - 1vw);
+  }
+  p {
+    font-size: 1.4em;
+  }
+}
+@media screen and (max-width: 516px) {
+  .project-page {
+    display: flex;
+  }
+  h1 {
+    font-size: 3.4em;
+  }
+  h3 {
+    font-size: 14pt;
+  }
+}
 .logo-container {
   flex: 1;
 }
@@ -75,4 +132,351 @@ h2 {
 .navigation-container .nav-links:hover, .navigation-container .nav-links:focus {
   color: #70e000;
   border-bottom: 0.3px solid #70e000;
+}
+
+@media screen and (max-width: 994px) {
+  header h1 {
+    font-size: 14pt;
+  }
+  header a {
+    font-size: 14pt;
+  }
+}
+.introduction {
+  display: none;
+}
+.introduction .intro {
+  width: 70%;
+  min-height: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.introduction .intro-top {
+  flex: 1;
+}
+.introduction .intro-bottom {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.introduction .intro-bottom h3 {
+  font-weight: 600;
+  font-size: 2.4em;
+  color: #38B000;
+  flex: 1;
+}
+
+.about {
+  display: none;
+}
+.about .about-body {
+  width: 90%;
+  min-height: 70%;
+  margin: 0 auto;
+  padding: 0.6rem;
+  gap: 2rem;
+  display: flex;
+}
+.about .about-body .about-top {
+  flex: 1;
+}
+.about .about-body .stack-container {
+  flex: 1;
+  display: flex;
+  border: 2px solid #70e000;
+  border-radius: 10px;
+  padding: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+}
+.about .about-body .stack-container legend {
+  padding: 0px 2em;
+}
+.about .about-body .stack-container legend p {
+  color: #70e000;
+}
+.about .about-body .stack-container .card {
+  width: 100%;
+  background: #001845;
+  color: #38B000;
+  font-size: 1.8em;
+  padding: 0.5em;
+  border-radius: 10px;
+  min-height: 20%;
+}
+.about .about-body .stack-container .card p {
+  font-size: 1.8rem;
+  padding-bottom: 2rem;
+}
+
+.project .project-page {
+  display: none;
+}
+.project .project-container {
+  width: 90%;
+  min-height: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.project .cover .cover-info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.project .cover .cover-info .cover-img {
+  min-width: 450px;
+  max-width: 800px;
+}
+.project .cover .cover-info .cover-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.project .cover .cover-info .cover-text .cover-links {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.project .cover .cover-info .cover-text .cover-links .cover-link {
+  flex: 0 1 200px;
+  border: 2px solid transparent;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.2rem;
+  transition: all 0.2s ease;
+}
+.project .cover .cover-info .cover-text .cover-links .cover-link img {
+  width: 45px;
+}
+.project .cover .cover-info .cover-text .cover-links .git-front:hover {
+  border: 2px solid #70e000;
+}
+.project .cover .cover-info .cover-text .cover-links .git-front:hover p {
+  color: #70e000;
+}
+.project .cover .cover-info .cover-text .cover-links .git-front:hover img {
+  content: url(../../assets/icons/githtml-active.png);
+}
+.project .cover .cover-info .cover-text .cover-links .git-back:hover {
+  border: 2px solid #70e000;
+}
+.project .cover .cover-info .cover-text .cover-links .git-back:hover p {
+  color: #70e000;
+}
+.project .cover .cover-info .cover-text .cover-links .git-back:hover img {
+  content: url(../../assets/icons/gitserver-active.png);
+}
+.project .cover .cover-info .cover-text .cover-links .live-web:hover {
+  border: 2px solid #70e000;
+}
+.project .cover .cover-info .cover-text .cover-links .live-web:hover p {
+  color: #70e000;
+}
+.project .cover .cover-info .cover-text .cover-links .live-web:hover img {
+  content: url(../../assets/icons/live-active.png);
+}
+.project .cover .cover-info .mobile-cover {
+  display: none;
+}
+.project .cover .cover-nav {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 2rem;
+}
+.project .cover .cover-nav .radial-button {
+  border: 2px solid #38B000;
+  background: transparent;
+  color: #38B000;
+  transition: all 0.2s ease-in;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.8em;
+}
+.project .cover .cover-nav .radial-button:hover {
+  color: #70e000;
+  border: 2px solid #70e000;
+}
+
+@media screen and (max-width: 944px) {
+  .project {
+    min-height: calc(900px - 1vh);
+  }
+  .project-container {
+    border: 2px solid white;
+    min-height: 95%;
+  }
+  .cover-info {
+    flex-direction: column;
+  }
+  .cover-info .cover-img {
+    width: 25px;
+  }
+  .cover-text .cover-expl {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .cover .cover-links {
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 556px) {
+  .cover-text .cover-expl {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 516px) {
+  .project .cover {
+    margin-top: 1.2rem;
+  }
+  .project .cover .cover-info .cover-qr {
+    content: url(../../assets/cover/qrcode/cover-qrcode-fixed.jpg);
+  }
+  .project .cover .cover-info .cover-img {
+    min-width: 250px;
+    max-width: 350px;
+  }
+  .project .cover .cover-info .cover-text {
+    display: none;
+  }
+  .project .cover .cover-info .mobile-cover {
+    width: 20%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    text-align: center;
+    cursor: pointer;
+  }
+  .project .cover .cover-info .mobile-cover .three-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .project .cover .cover-info .mobile-cover .three-dots .dot {
+    width: 10px;
+    height: 10px;
+    display: block;
+    background: #38B000;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+  }
+  .project .cover .cover-info .mobile-cover .three-dots .dot:hover {
+    background: #70e000;
+  }
+  .project .cover .cover-info .mobile-cover .three-dots span:hover {
+    color: #70e000;
+  }
+  .project .cover .cover-nav .radial-button {
+    width: 35px;
+    height: 35px;
+  }
+}
+.project-page {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  min-height: 100%;
+  z-index: 10;
+  transform: translate(0px, -100%);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+.project-page .project-head {
+  display: flex;
+  justify-content: center;
+  height: 90px;
+  align-items: center;
+  border: 2px solid white;
+  width: 100%;
+  transition: border 0.3s ease-in;
+}
+.project-page .project-head .project-escape {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.6rem;
+  border: 2px solid #38B000;
+  transition: all 0.3s ease-in;
+  min-width: 100px;
+}
+.project-page .project-head .project-escape .escape-icon {
+  width: 10px;
+  height: 10px;
+}
+.project-page .project-head .project-escape:hover {
+  border: 2px solid #70e000;
+}
+.project-page .project-head .project-escape:hover p {
+  color: #70e000;
+}
+.project-page .project-head .project-nav {
+  flex: 1;
+  display: flex;
+  justify-content: right;
+}
+.project-page .project-head .project-nav .nav-con {
+  display: flex;
+  gap: 2rem;
+}
+.project-page .project-head .project-nav .nav-con .go-previous {
+  border: 2px solid #38B000;
+  padding: 0.4rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: all 0.3s ease-in;
+  min-width: 100px;
+}
+.project-page .project-head .project-nav .nav-con .go-previous:hover {
+  border: 2px solid #70e000;
+}
+.project-page .project-head .project-nav .nav-con .go-previous:hover p {
+  color: #70e000;
+}
+.project-page .project-head .project-nav .nav-con .go-previous img {
+  width: 20px;
+  height: 20px;
+}
+.project-page .project-head .project-nav .nav-con .go-previous img {
+  transform: rotate(180deg);
+}
+.project-page .project-head .project-nav .nav-con .go-next {
+  border: 2px solid #38B000;
+  padding: 0.4rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  transition: all 0.3s ease-in;
+  min-width: 100px;
+}
+.project-page .project-head .project-nav .nav-con .go-next:hover {
+  border: 2px solid #70e000;
+}
+.project-page .project-head .project-nav .nav-con .go-next:hover p {
+  color: #70e000;
+}
+.project-page .project-head .project-nav .nav-con .go-next img {
+  width: 20px;
+  height: 20px;
 }/*# sourceMappingURL=main.css.map */
