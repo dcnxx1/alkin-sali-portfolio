@@ -95,6 +95,15 @@ section {
   display: none;
 }
 
+.body-black {
+  display: none;
+  height: 100%;
+  width: 100%;
+  z-index: 9;
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+}
+
 @media screen and (max-width: 994px) {
   h1 {
     font-size: calc(4.8em - 1vw);
@@ -104,9 +113,6 @@ section {
   }
 }
 @media screen and (max-width: 516px) {
-  .project-page {
-    display: flex;
-  }
   h1 {
     font-size: 3.4em;
   }
@@ -143,7 +149,7 @@ section {
   }
 }
 .introduction {
-  display: none;
+  visibility: hidden;
 }
 .introduction .intro {
   width: 70%;
@@ -169,7 +175,7 @@ section {
 }
 
 .about {
-  display: none;
+  visibility: hidden;
 }
 .about .about-body {
   width: 90%;
@@ -231,7 +237,7 @@ section {
 }
 .project .cover .cover-info .cover-img {
   min-width: 450px;
-  max-width: 800px;
+  max-width: 600px;
 }
 .project .cover .cover-info .cover-text {
   display: flex;
@@ -246,41 +252,45 @@ section {
 }
 .project .cover .cover-info .cover-text .cover-links .cover-link {
   flex: 0 1 200px;
+  padding: 0.2rem;
   border: 2px solid transparent;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 0.2rem;
   transition: all 0.2s ease;
+}
+.project .cover .cover-info .cover-text .cover-links .cover-link:hover {
+  border: 2px solid #70e000;
+  color: #70e000;
 }
 .project .cover .cover-info .cover-text .cover-links .cover-link img {
   width: 45px;
 }
-.project .cover .cover-info .cover-text .cover-links .git-front:hover {
+.project .cover .cover-info .cover-text .cover-links .cover-link .git-front:hover {
   border: 2px solid #70e000;
 }
-.project .cover .cover-info .cover-text .cover-links .git-front:hover p {
+.project .cover .cover-info .cover-text .cover-links .cover-link .git-front:hover p {
   color: #70e000;
 }
-.project .cover .cover-info .cover-text .cover-links .git-front:hover img {
+.project .cover .cover-info .cover-text .cover-links .cover-link .git-front:hover img {
   content: url(../../assets/icons/githtml-active.png);
 }
-.project .cover .cover-info .cover-text .cover-links .git-back:hover {
+.project .cover .cover-info .cover-text .cover-links .cover-link .git-back:hover {
   border: 2px solid #70e000;
 }
-.project .cover .cover-info .cover-text .cover-links .git-back:hover p {
+.project .cover .cover-info .cover-text .cover-links .cover-link .git-back:hover p {
   color: #70e000;
 }
-.project .cover .cover-info .cover-text .cover-links .git-back:hover img {
+.project .cover .cover-info .cover-text .cover-links .cover-link .git-back:hover img {
   content: url(../../assets/icons/gitserver-active.png);
 }
-.project .cover .cover-info .cover-text .cover-links .live-web:hover {
+.project .cover .cover-info .cover-text .cover-links .cover-link .live-web:hover {
   border: 2px solid #70e000;
 }
-.project .cover .cover-info .cover-text .cover-links .live-web:hover p {
+.project .cover .cover-info .cover-text .cover-links .cover-link .live-web:hover p {
   color: #70e000;
 }
-.project .cover .cover-info .cover-text .cover-links .live-web:hover img {
+.project .cover .cover-info .cover-text .cover-links .cover-link .live-web:hover img {
   content: url(../../assets/icons/live-active.png);
 }
 .project .cover .cover-info .mobile-cover {
@@ -391,22 +401,24 @@ section {
   position: absolute;
   background: rgba(0, 0, 0, 0.9);
   width: 100%;
-  min-height: 100%;
   z-index: 10;
   transform: translate(0px, -100%);
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
+  flex-direction: column;
+  gap: 2rem;
 }
 .project-page .project-head {
   display: flex;
   justify-content: center;
   height: 90px;
   align-items: center;
-  border: 2px solid white;
   width: 100%;
   transition: border 0.3s ease-in;
+  width: 90%;
+  align-self: center;
 }
 .project-page .project-head .project-escape {
   display: flex;
@@ -438,7 +450,7 @@ section {
   gap: 2rem;
 }
 .project-page .project-head .project-nav .nav-con .go-previous {
-  border: 2px solid #38B000;
+  border: 2px solid transparent;
   padding: 0.4rem;
   cursor: pointer;
   display: flex;
@@ -461,7 +473,7 @@ section {
   transform: rotate(180deg);
 }
 .project-page .project-head .project-nav .nav-con .go-next {
-  border: 2px solid #38B000;
+  border: 2px solid transparent;
   padding: 0.4rem;
   cursor: pointer;
   display: flex;
@@ -479,4 +491,80 @@ section {
 .project-page .project-head .project-nav .nav-con .go-next img {
   width: 20px;
   height: 20px;
+}
+.project-page .project-header {
+  border-bottom: 2px solid #70e000;
+  text-align: center;
+  width: 90%;
+  align-self: center;
+}
+.project-page .project-header .project-img {
+  width: 90%;
+  padding-bottom: 1rem;
+}
+.project-page .project-header .project-head-text {
+  padding-bottom: 2rem;
+}
+.project-page .project-body {
+  width: 90%;
+  align-self: center;
+  font-size: calc(1.8em - 3px);
+  flex: 1;
+}
+.project-page .project-footer {
+  border: 2px solid white;
+  display: flex;
+}
+.project-page .project-footer .cover-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  font-size: 8pt;
+}
+.project-page .project-footer .cover-links .cover-link {
+  padding: 0.5rem;
+  width: 100%;
+  text-align: center;
+  border: 2px solid transparent;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+.project-page .project-footer .cover-links .cover-link:hover {
+  border: 2px solid #70e000;
+  color: #70e000;
+}
+.project-page .project-footer .cover-links .cover-link img {
+  width: 45px;
+}
+.project-page .project-footer .cover-links .cover-link .git-front:hover {
+  border: 2px solid #70e000;
+}
+.project-page .project-footer .cover-links .cover-link .git-front:hover p {
+  color: #70e000;
+}
+.project-page .project-footer .cover-links .cover-link .git-front:hover img {
+  content: url(../../assets/icons/githtml-active.png);
+}
+.project-page .project-footer .cover-links .cover-link .git-back:hover {
+  border: 2px solid #70e000;
+}
+.project-page .project-footer .cover-links .cover-link .git-back:hover p {
+  color: #70e000;
+}
+.project-page .project-footer .cover-links .cover-link .git-back:hover img {
+  content: url(../../assets/icons/gitserver-active.png);
+}
+.project-page .project-footer .cover-links .cover-link .live-web:hover {
+  border: 2px solid #70e000;
+}
+.project-page .project-footer .cover-links .cover-link .live-web:hover p {
+  color: #70e000;
+}
+.project-page .project-footer .cover-links .cover-link .live-web:hover img {
+  content: url(../../assets/icons/live-active.png);
+}
+.project-page .project-footer .cover-links .cover-link img {
+  width: 25px;
 }/*# sourceMappingURL=main.css.map */

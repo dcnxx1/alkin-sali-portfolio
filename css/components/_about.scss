@@ -1,6 +1,7 @@
 @import '../mixins';
 .about{
-    display: none;
+    // display: none;
+    visibility: hidden;
     .about-body{
         width: 90%;
         min-height: 70%;

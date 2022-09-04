@@ -24,13 +24,14 @@
             gap: 2rem;
             .cover-img{
                 min-width: 450px;
-                max-width: 800px;
+                max-width: 600px;
             }
 
             .cover-text{
                 display: flex;
                 flex-direction: column;
                 gap: 2rem;
+                
                 .cover-links{
                     width: 100%;
                     display: flex;
@@ -38,45 +39,11 @@
                     flex-wrap: wrap;
                     .cover-link{
                         flex: 0 1 200px;
-                        border: 2px solid transparent;
-                        display: flex;
-                        justify-content: space-around;
-                        align-items: center;
                         padding: .2rem;
-                        transition: all .2s ease;
-                        img{
-                            width: 45px;
-                        }
+                        @include cover-link;
                        
                     }
 
-                    .git-front{
-                       
-                        &:hover{
-                           @include active-buttons;
-                            img {
-                               content: url(../../assets/icons/githtml-active.png);
-                            }
-                        }
-                    }
-
-                    .git-back{
-                        &:hover{
-                            @include active-buttons;
-                            img {
-                                content: url(../../assets/icons/gitserver-active.png);
-                            }
-                        }
-                    }
-                    
-                    .live-web{
-                        &:hover{
-                            @include active-buttons;
-                            img {
-                                content: url(../../assets/icons/live-active.png);
-                            }
-                        }
-                    }
                 }
             }
 
@@ -88,12 +55,13 @@
         .cover-nav{
             position: absolute;
             bottom: 0px;
-            
+
             display: flex;
             width: 100%;
             justify-content: space-evenly;
             padding: 2rem;
             .radial-button{
+                
                 @include rotateButton;
                 width: 45px;
                 height: 45px;

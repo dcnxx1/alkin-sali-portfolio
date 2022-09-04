@@ -21,6 +21,7 @@ body {
     font-family: $roboto;
     margin: 0 auto;
     position: relative;
+
 }
 
 header, section, main {
@@ -99,6 +100,14 @@ section{
 .project-page{
     display: none;
 }
+.body-black{
+    display: none;
+    height: 100%;
+    width: 100%;
+    z-index:9;
+    background: rgb(0, 0, 0, .7);
+    position: absolute;
+}
 
 @media screen and (max-width: 994px){
     h1 {
@@ -116,10 +125,6 @@ section{
 }
 
 @media screen and (max-width: 516px){
-
-    .project-page{
-        display: flex;    
-    }
     h1{
         font-size: $font-medium-big;
     }

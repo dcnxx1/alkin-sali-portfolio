@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/main.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.15/dist/css/splide-core.min.css">
     <script defer src="./js/script.js"></script>
 </head>
     <body>
+       <div class="body-black"></div>
         <div class="project-page">
           <div class="project-head">
             <div class="project-escape">
                 <img class="escape-icon" src="./assets/icons/close(1).png" />
                 <p>Afsluiten</p>
             </div>
+            
             <div class="project-nav">
                <div class="nav-con">
                     <div class="go-previous">
@@ -28,6 +31,33 @@
                </div>
             </div>
           </div>
+
+          <div class="project-header">
+                <!-- <img class="project-img" src="./assets/icons/alktune_full_png.png" /> -->
+            <h1 class="project-head-text">QRCode</h1>
+            </div>
+
+            <div class="project-body">
+                <p>Verborgen informatie, links naar andere websites of een SMS versturen via een foto met zwart-witte puntjes, kunnen alleen de slimste
+                    techneuten hebben bedacht. Op mijn website kun je tussen een V-card, SMS, Text en een E-mail QRCode kiezen.</p>
+            </div>
+
+            <div class="project-footer">
+                <div class="cover-links">
+                    <a class="cover-link git-front" href="https://github.com/dcnxx1/qrCode" target="_blank">
+                        <img src="./assets/icons/githtml.png" alt="git github html logo Alkin Sali qrCode Generator" />
+                        <p class="icon-text">Front-end source</p>
+                    </a>
+                    <a class="cover-link git-back" href="https://github.com/dcnxx1/qrcode-backend" target="_blank">
+                        <img src="./assets/icons/gitserver.png" alt="git github server logo Alkin Sali qrCode Generator" />
+                        <p class="icon-text">Back-end source</p>
+                    </a>
+                    <a class="cover-link live-web" href="https://qrcode-frnt.herokuapp.com/" target="_blank">
+                        <img src="./assets/icons/live.png" alt="live www website github alkin Sali qrcode Generator">
+                        <p class="icon-text"> Website</p>
+                    </a>
+                </div>
+            </div>
         </div>
         <header>
             <nav>
@@ -129,7 +159,11 @@
 
                     <div class="cover">
                         <div class="cover-info">
-                            <img class="cover-img cover-qr" src="./assets/cover/qrcode/cover-desktop-qrcode.jpg" />
+                            <div class="splide">
+                                <div class="splide__track">
+                                    <div class="splide__list">
+                                        <li class="splide__slide">
+                                            <img class="cover-img cover-qr" src="./assets/cover/qrcode/cover-desktop-qrcode.jpg" />
                             <div class="cover-text">
                                 <p class="cover-expl">Verborgen informatie, links naar andere websites of een sms versturen via een foto met zwart-witte puntjes, kunnen alleen de slimste
                                     techneuten hebben bedacht. Op QRCode Generator kun je kiezen tussen v-card, sms, text en een e-mail QRCode </p>
@@ -147,6 +181,11 @@
                                         <p class="icon-text"> Website</p>
                                     </a>
                                 </div>
+                            </div>
+                                        </li>
+                                    </div>
+                                </div>
+                                
                             </div>
                             <div class="mobile-cover">
                                 <div class="three-dots">
@@ -169,5 +208,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollToPlugin.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.15/dist/js/splide.min.js"></script>
     </body>
 </html>

@@ -4,20 +4,21 @@
     position: absolute;
     background: rgb(0, 0, 0, .9);
     width: 100%;
-    min-height: 100%;
     z-index: 10;
     transform: translate(0px, -100%);
     top: 0;bottom: 0;right: 0;left: 0;
-
+    flex-direction: column;
+    gap: 2rem;
     .project-head{
         display: flex;
         justify-content: center;
         height: 90px;
         align-items: center;
-        border: 2px solid white;
         width: 100%;
         transition: border .3s ease-in;
-        
+        width: 90%;
+        align-self: center;
+
         .project-escape{
             display: flex;
             justify-content: space-evenly;
@@ -53,6 +54,51 @@
                 }
                 .go-next{
                     @include proj-nav;
+                }
+            }
+        }
+    }
+
+    .project-header{
+        border-bottom: 2px solid $active-green;
+        text-align: center;
+        width: 90%;
+        align-self: center;
+        .project-img{
+            width: 90%;
+            padding-bottom: 1rem;
+        }
+
+        .project-head-text{
+            padding-bottom: 2rem;
+        }
+    }
+
+    .project-body{
+        width: 90%;
+        align-self: center;
+        font-size: calc($font-small - 3px);
+        flex: 1;
+
+        .cover-links{
+
+        }
+    }
+    .project-footer{
+        border: 2px solid white;
+        display: flex;
+        .cover-links{
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            font-size: 8pt;
+            .cover-link{
+                padding: .5rem;
+                width: 100%;
+                text-align: center;
+                @include cover-link;
+                img{
+                    width: 25px;
                 }
             }
         }

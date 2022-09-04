@@ -47,7 +47,7 @@
 }
 
 @mixin proj-nav{
-    border: 2px solid $inactive-green;
+    border: 2px solid transparent;
     padding: .4rem;
     cursor: pointer;
     display: flex;
@@ -61,5 +61,53 @@
     img{
         width: 20px;
         height: 20px;
+    }
+}
+
+@mixin cover-links{
+
+}
+
+@mixin cover-link{
+    border: 2px solid transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all .2s ease;
+
+    &:hover{
+        border: 2px solid $active-green;
+        color: $active-green;
+    }
+    img{
+        width: 45px;
+    }
+
+    .git-front{
+                       
+        &:hover{
+           @include active-buttons;
+            img {
+               content: url(../../assets/icons/githtml-active.png);
+            }
+        }
+    }
+
+    .git-back{
+        &:hover{
+            @include active-buttons;
+            img {
+                content: url(../../assets/icons/gitserver-active.png);
+            }
+        }
+    }
+    
+    .live-web{
+        &:hover{
+            @include active-buttons;
+            img {
+                content: url(../../assets/icons/live-active.png);
+            }
+        }
     }
 }
