@@ -91,12 +91,15 @@ span{
     color: $active-green;
 }
 section{
-    height: 100vh;
-    min-height: calc(900px - 10vh);
-    align-items: center;
-    display: flex;
-}
 
+    min-height: calc(900px + 10vh);
+
+    // align-items: center;
+    // display: flex;
+}
+.mobile-cover{
+    display: none;
+}
 .project-page{
     display: none;
 }

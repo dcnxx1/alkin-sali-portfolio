@@ -18,7 +18,7 @@
 
 @mixin rotateButton {
     border: 2px solid $inactive-green;
- 
+    border-radius: 50%;
     background: transparent;
     color: $inactive-green;
     transition: all .2s ease-in;
@@ -64,50 +64,24 @@
     }
 }
 
-@mixin cover-links{
 
-}
 
 @mixin cover-link{
-    border: 2px solid transparent;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     transition: all .2s ease;
-
-    &:hover{
-        border: 2px solid $active-green;
-        color: $active-green;
-    }
+    display: flex;
+    height: fit-content;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0px .5rem;
+    border: 2px solid transparent;
+    flex: 1;
+    gap: 1rem;
     img{
         width: 45px;
+        height: 45px;
     }
 
-    .git-front{
-                       
-        &:hover{
-           @include active-buttons;
-            img {
-               content: url(../../assets/icons/githtml-active.png);
-            }
-        }
-    }
-
-    .git-back{
-        &:hover{
-            @include active-buttons;
-            img {
-                content: url(../../assets/icons/gitserver-active.png);
-            }
-        }
-    }
-    
-    .live-web{
-        &:hover{
-            @include active-buttons;
-            img {
-                content: url(../../assets/icons/live-active.png);
-            }
-        }
+    &:hover{
+        @include active-buttons;
     }
 }
