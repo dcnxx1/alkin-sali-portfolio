@@ -633,7 +633,7 @@ footer .dot {
   padding-top: 0.5rem;
   width: 90%;
   align-self: center;
-  font-size: calc(1.8em - 3px);
+  font-size: 9pt;
   flex: 1;
 }
 .project-page .project-footer {
