@@ -1,13 +1,15 @@
 .introduction{
     // display: none;
     // visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .intro{
-        width: 70%;
-        min-height: 70%;
+        width: 90%;
+        height: 700px;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
-        
     }
 
     .intro-top{
@@ -30,3 +32,27 @@
     }
 }
 
+@media screen and (max-width: 844px){
+    h1{
+        font-size: $font-large;
+    }
+
+    h2{
+        font-size: $font-big;
+    }
+}
+
+@media screen and (max-width: 799px){
+    .introduction{
+       .intro{
+        padding-top: 6rem;
+        width: 95%;
+       }
+    }
+    h1{
+
+    }
+    h2{
+        font-size: $font-medium;
+    }
+}

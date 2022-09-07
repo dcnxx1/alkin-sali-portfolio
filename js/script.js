@@ -1,4 +1,4 @@
-var splideIndex = 1
+// INIT FOR SPLIDE 
 const covers = document.querySelectorAll('.mobile-cover')
 
 const appcover = document.querySelectorAll('.cover-img')
@@ -15,12 +15,14 @@ const nextButton = document.querySelector('.go-next')
 
 // gsap.to('.cover-qr', {scale: ".5", transform: "translate(-50px, 0px)", opacity: 0, duration: .2})
 
+// SPLIDE FUNCTIONS
+
 const splide = new Splide('.splide', {
     arrows: false,
     perPage: 1,
     pagination: false,
     drag: false,
-    start: splideIndex,
+    start: 0,
     perMove: 1,
     isNavigation: true
 })
@@ -30,16 +32,7 @@ splide.on('mounted', () => {
     removeButtons(splide.length, splide.index)
 })
 
-
-
-
 splide.mount()
-
-
-
-
-
-
 
 nextButton.addEventListener('click', e => {
     splide.go('>')
@@ -67,7 +60,6 @@ function removeButtons(length, index){
         })
     }
 }
-
 
 previousButton.addEventListener('click',e => {
     splide.go('<')
@@ -116,11 +108,6 @@ covers.forEach(cover => {
         })
     })
 })
-
-
-
-
-
 
 closePage.addEventListener('click', e => {
     
@@ -195,23 +182,65 @@ function handleOverBody () {
 
 
 
+// INIT NAV 
 
+const navLinks = document.querySelectorAll('.nav-links')
+document.querySelector('.logo-name').addEventListener('click', e => {
+    gsap.to(window, {duration : 1.3, scrollTo: `#intro`, ease: "power2"})
+})
+navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault()
+        const attr = link.getAttribute('data-link')
+        
+        gsap.to(window, {duration: 1.3, scrollTo: {y: `#${attr}`, offsetY: getWidth(attr)}, ease: "power2"})
+        
+    })
 
+})
 
-
-// btn inactive
-// gsap.to(button, {
-//     background: '#002855',
-//     color: '#38B000',
-//     border: '2px solid #38B000 ',
-//     duration: .1
-// })
-
-// btn active
-// gsap.to(button, {
-//     background: '#70e000',
-//     border: '2px solid #70e000 ',
-//     color: '#002855',
-//     duration: .1
+window.onscroll = () => {
     
-// })
+    if(window.scrollY >= 100){
+        gsap.to('header', {
+            y: '20px',
+            background: '#001845',
+            width: '50%',
+            border: '2px solid #70e000',
+            minWidth: "fit-content",
+            position: 'fixed',
+            left: '25%',
+            borderRadius: '15px',
+            ease: "power2"
+        })
+    
+    } else {
+        gsap.to('header', {
+            y: '0px',
+            width: '100%',
+            background: 'initial',
+            left: '0px',
+            minWidth: 'initial',
+            position: 'initial',
+            borderRadius: '0px',
+            ease: "power2",
+            border: 'none'
+        })
+    }
+    
+}
+
+
+
+
+function getWidth (attr) {
+    if(window.innerWidth <= 700){
+        return 65
+    } else {
+        if(attr == "about"){
+            return 95
+        } else {
+            return 80
+        }
+    }
+}

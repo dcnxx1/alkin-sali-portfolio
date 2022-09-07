@@ -37,7 +37,8 @@
                 <ul class="splide__list project-splide-list">
                    <li id="alktunes" class="splide__slide project-splide-slide">
                         <div class="project-header">
-                            <h1 class="project-head-text">Alktunes</h1>
+                            
+                            <img class="header-alktunes" src="./assets/icons/alktune_full_png.png" />
                         </div>
             
                         <div class="project-body">
@@ -51,15 +52,15 @@
             
                         <div class="project-footer">
                             <div class="cover-links">
-                                <a class="cover-link git-front" href="https://github.com/dcnxx1/qrCode" target="_blank">
+                                <a class="cover-link git-front" href="https://github.com/dcnxx1/alktunes/tree/main1" target="_blank">
                                     <img src="./assets/icons/githtml.png" alt="git github html logo Alkin Sali qrCode Generator" />
                                     <p class="icon-text">Front-end source</p>
                                 </a>
-                                <a class="cover-link git-back" href="https://github.com/dcnxx1/qrcode-backend" target="_blank">
+                                <a class="cover-link git-back" href="https://github.com/dcnxx1/alktunes_server" target="_blank">
                                     <img src="./assets/icons/gitserver.png" alt="git github server logo Alkin Sali qrCode Generator" />
                                     <p class="icon-text">Back-end source</p>
                                 </a>
-                                <a class="cover-link live-web" href="https://qrcode-frnt.herokuapp.com/" target="_blank">
+                                <a class="cover-link live-web" href="https://alktunes.com" target="_blank">
                                     <img src="./assets/icons/live.png" alt="live www website github alkin Sali qrcode Generator">
                                     <p class="icon-text"> Website</p>
                                 </a>
@@ -68,7 +69,8 @@
                    </li> 
                    <li id="shopee" class="splide__slide project-splide-slide">
                     <div class="project-header">
-                        <h1 class="project-head-text">Shopee</h1>
+                        
+                        <img class="header-shopee" src="./assets/icons/sshopeelogopng.png"/>
                     </div>
         
                     <div class="project-body">
@@ -80,15 +82,15 @@
         
                     <div class="project-footer">
                         <div class="cover-links">
-                            <a class="cover-link git-front" href="https://github.com/dcnxx1/qrCode" target="_blank">
+                            <a class="cover-link git-front" href="https://github.com/dcnxx1/shopee_frontend" target="_blank">
                                 <img src="./assets/icons/githtml.png" alt="git github html logo Alkin Sali qrCode Generator" />
                                 <p class="icon-text">Front-end source</p>
                             </a>
-                            <a class="cover-link git-back" href="https://github.com/dcnxx1/qrcode-backend" target="_blank">
+                            <a class="cover-link git-back" href="https://github.com/dcnxx1/shopee-backend" target="_blank">
                                 <img src="./assets/icons/gitserver.png" alt="git github server logo Alkin Sali qrCode Generator" />
                                 <p class="icon-text">Back-end source</p>
                             </a>
-                            <a class="cover-link live-web" href="https://qrcode-frnt.herokuapp.com/" target="_blank">
+                            <a class="cover-link live-web" href="https://shopee-frontend.herokuapp.com/" target="_blank">
                                 <img src="./assets/icons/live.png" alt="live www website github alkin Sali qrcode Generator">
                                 <p class="icon-text"> Website</p>
                             </a>
@@ -129,44 +131,45 @@
         </div>
         <header>
             <nav>
-                <div class="logo-container">
-                    <h3>Alkin Sali</h3>
+                <div id="myname" class="logo-container">
+                    <h3 class="logo-name">Alkin Sali</h3>
                 </div>
                 <ul class="navigation-container">
-                    <li><a class="nav-links" href="">Over</a></li>
-                    <li><a class="nav-links" href="">Projecten</a></li>
-                    <li><a class="nav-links" href="">Activiteit</a></li>
-                    <li><a class="nav-links" href="">Contact</a></li>
-                    <li><a class="nav-links" href="">CV</a></li>
+                    <li><a class="nav-links" data-link="about" >Over</a></li>
+                    <li><a class="nav-links" data-link="project" >Projecten</a></li>
+                    <li><a class="nav-links" data-link="activity" >Activiteit</a></li>
+                    <li><a class="nav-links"  >Contact</a></li>
+                    <li><a class="nav-links"  >CV</a></li>
+                    <li><img class="nav-menu" src="./assets/icons/menu.png" /></li>
                 </ul>
             </nav>
         </header>
 
         <main>
-            <section class="introduction">
+            <section id="intro" class="introduction">
                 <div class="intro">
                     <div class="intro-top">
-                        <h1>Hi,</h1> <br/>
+                        <h1 class="cover-section">Hi,</h1> <br/>
                         <h2>Mijn naam is Alkin</h2> <br/>
                         <h2>Ik ben een full-stack ontwikkelaar</h2>
                     </div>
                     <div class="intro-bottom">
-                        <h3>Ik maak het internet een stukje mooier. </h3>
-                        <h3>Scroll even verder, dan leg ik je uit hoe ik dat doe</h3>
+                        <h2>Ik maak het internet een stukje mooier. </h2>
+                        
                     </div>
                 </div>
             </section>
-            <section class="about">
+            <section id="about" class="about">
                 <div class="about-body">
                     <div class="about-top">
-                        <h1>Over</h1>
+                        <h1 class="cover-section">Over</h1>
                         <br/>
                         <br/>
                         <br/>
-                        <p>Hallo, ik ben <span>Alkin</span> en ik ben een ontwikkelaar uit <span>Nieuw-Vennep.</span> 
+                        <p><span>Hallo</span>, ik ben <span>Alkin</span> en ik ben een <span>ontwikkelaar</span> uit <span>Nieuw-Vennep.</span> 
                             Ik programmeer al bijna 3 jaar als <span>hobbyist</span>. 
                             Ik begon met <span>webontwikkeling</span> in 2019 waarbij ik <span>HTML</span> en <span>CSS </span>
-                            begon te mengen om <span>websites</span> te creëren. Paar jaar later
+                            begon te mengen om <span>websites</span> te creëren. Paar jaar verder
                             en ik ben trots om mijzelf een <span>full-stack developer</span> te erkennen. 
                         </p>
                         <br/>
@@ -220,13 +223,13 @@
                 </div>
                
             </section>
-            <section class="project">
+            <section id="project" class="project">
                 
                 <div class="project-container">
                     
-                    <h1>Projecten</h1>
+                    <h1 class="cover-section">Projecten</h1>
                     <div class="project-name">
-                        <a href="" style="text-decoration: underline;"><h2>Alktunes</h2></a>
+                        <a href="" class="proj-link" style="text-decoration: underline;"><h2>Alktunes.com</h2></a>
                     </div>
                     <div id="alktunes" class="cover">
                         <img class="img-cover cover-alktunes" src="./assets/cover/alktunes/cover-alktunes-desktop.jpg"/>
@@ -264,7 +267,7 @@
 
                     </div>
                     <div class="project-name">
-                        <a href="" style="text-decoration: underline;"><h2>Shopee</h2></a>
+                        <a href="" class="proj-link" style="text-decoration: underline;"><h2>Shopee.com</h2></a>
                     </div>
                     <div id="shopee" class="cover">
                        
@@ -302,7 +305,7 @@
                          </div>
                     </div>
                     <div class="project-name">
-                        <a href="" style="text-decoration: underline;"><h2>QRCode</h2></a>
+                        <a href="" class="proj-link" style="text-decoration: underline;"><h2>QRCode.com</h2></a>
                     </div>
                     <div id="qrcode" class="cover">
                         <img class="img-cover cover-qrcode" src="./assets/cover/qrcode/cover-desktop-qrcode.jpg"/>
@@ -340,14 +343,30 @@
 
                 </div>
             </section>
-            <section class="activity">
+            <section id="activity" class="activity">
                 <div class="activity-container">
-                    <h1>Activiteit</h1>
-                    
+                    <h1 class="cover-section">Activiteit</h1>
+                    <div class="activity-body">
+                        <img class="activity-img" src="./assets/cover/loransbarber.jpg" />
+                        <h2>Momenteel ben ik actief bezig om een locale kapper in Nieuw-Vennep van een website te voorzien</h2>
+                    </div>
                 </div>
             </section>
 
         </main>
+        <footer>
+            <a href="">
+                <img src="./assets/icons/github-inactive.png" />
+            </a>
+            <div class="dot"></div>
+            <a href="mailto:alkisali1@hotmail.com">
+                <img src="./assets/icons/email.png" />
+            </a>
+            <div class="dot"></div>
+            <a href="">
+                <img src="./assets/icons/linkedin-logo.png" />
+            </a>
+        </footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollToPlugin.min.js"></script>

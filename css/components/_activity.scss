@@ -1,0 +1,45 @@
+.activity{
+    margin-top: 10rem;
+    
+    .activity-container{
+        width: 90%;
+        margin: 0 auto;
+        h1{
+            padding-bottom: 10%;
+        }
+        .activity-body{
+
+            display: flex;
+            
+            gap: 2rem;
+            align-items: center;
+            h2 {
+                font-size: $font-medium;
+            }
+            .activity-img{
+                min-width: 150px;
+                max-width: 250px;
+                flex: 1;
+            }
+        }
+        
+    }
+}
+
+
+@media screen and (max-width: 1000px){
+    .activity{
+        min-height: 500px;
+       .activity-body{
+        border-bottom: 2px solid $active-green;
+        padding-bottom: 2rem;
+        
+        flex-direction: column;
+        h2{
+            font-size: $font-small !important;
+            
+        }
+       }
+       
+    }
+}

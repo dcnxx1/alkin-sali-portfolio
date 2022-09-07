@@ -24,17 +24,16 @@ body {
 
 }
 
-header, section, main {
+header, section, main, footer, nav {
     max-width: 2500px;
+    margin: 0 auto;
 }
 
 
 header {
     width: 100%;
     min-height: 60px;
-    position: fixed;
     background: $dark-tech;
-    top: 0px;
     z-index: 5;
 }
 
@@ -56,7 +55,8 @@ ul{
 a{
     text-decoration: none;
     color: $inactive-green;
-    
+    user-select: none;
+   
     &:active{
         color: $inactive-green;
     }
@@ -84,18 +84,15 @@ h3{
 }
 
 p{
-    font-size: $font-small;
+    font-size: $font-medium;
     color: $inactive-green;
 }
 span{
     color: $active-green;
 }
 section{
-
-    min-height: calc(900px + 10vh);
-
-    // align-items: center;
-    // display: flex;
+    height: 900px;
+    min-height: 100vh;
 }
 .mobile-cover{
     display: none;
@@ -112,6 +109,30 @@ section{
     position: absolute;
 }
 
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    background: red;
+    height: 100px;
+    width: 100%;
+    background : $card-blue;
+
+    img{
+        width: 45px;
+        
+    }
+
+    .dot{
+        width: 10px;
+        height: 10px;
+        background: white;
+        border-radius: 50%;
+    }
+}
+
 @media screen and (max-width: 994px){
     h1 {
         font-size: calc($font-big - 1vw);
@@ -123,7 +144,7 @@ section{
 
     }
     p{
-        font-size: $font-xsmall;
+        font-size: $font-small;
     }
 }
 
@@ -132,6 +153,9 @@ section{
         font-size: $font-medium-big;
     }
 
+    .cover-section{
+        font-size: $font-big;
+    }
     h3{
         font-size: 14pt;
     }

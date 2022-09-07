@@ -1,6 +1,8 @@
 @font-face {
   font-family: "Roboto", sans-serif;
-  src: url(./Roboto-Light.ttf);
+  src: url("./Roboto-Light.ttf") format("truetype");
+  src: url("./roboto-light-webfont.woff") format("woff");
+  src: url("./roboto-light-webfont.woff2") format("woff2");
 }
 * {
   margin: 0;
@@ -19,16 +21,15 @@ body {
   position: relative;
 }
 
-header, section, main {
+header, section, main, footer, nav {
   max-width: 2500px;
+  margin: 0 auto;
 }
 
 header {
   width: 100%;
   min-height: 60px;
-  position: fixed;
   background: #002855;
-  top: 0px;
   z-index: 5;
 }
 
@@ -49,6 +50,10 @@ ul {
 a {
   text-decoration: none;
   color: #38B000;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 a:active {
   color: #38B000;
@@ -76,7 +81,7 @@ h3 {
 }
 
 p {
-  font-size: 1.8em;
+  font-size: 2.4em;
   color: #38B000;
 }
 
@@ -85,7 +90,8 @@ span {
 }
 
 section {
-  min-height: calc(900px + 10vh);
+  height: 900px;
+  min-height: 100vh;
 }
 
 .mobile-cover {
@@ -105,17 +111,40 @@ section {
   position: absolute;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  background: red;
+  height: 100px;
+  width: 100%;
+  background: #001845;
+}
+footer img {
+  width: 45px;
+}
+footer .dot {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+}
+
 @media screen and (max-width: 994px) {
   h1 {
     font-size: calc(4.8em - 1vw);
   }
   p {
-    font-size: 1.4em;
+    font-size: 1.8em;
   }
 }
 @media screen and (max-width: 516px) {
   h1 {
     font-size: 3.4em;
+  }
+  .cover-section {
+    font-size: 4.8em;
   }
   h3 {
     font-size: 14pt;
@@ -123,6 +152,21 @@ section {
 }
 .logo-container {
   flex: 1;
+}
+.logo-container h3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.logo-container h3:hover {
+  color: #70e000;
 }
 
 .navigation-container {
@@ -132,9 +176,17 @@ section {
   justify-content: space-evenly;
   flex: 1;
 }
+.navigation-container .nav-menu {
+  display: none;
+}
 .navigation-container .nav-links {
   transition: all 0.1s ease-in;
   padding-bottom: 0.2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .navigation-container .nav-links:hover, .navigation-container .nav-links:focus {
   color: #70e000;
@@ -142,6 +194,9 @@ section {
 }
 
 @media screen and (max-width: 994px) {
+  nav {
+    left: 5%;
+  }
   header h1 {
     font-size: 14pt;
   }
@@ -149,9 +204,24 @@ section {
     font-size: 14pt;
   }
 }
+@media screen and (max-width: 602px) {
+  .navigation-container .nav-menu {
+    display: block;
+    width: 25px;
+    cursor: pointer;
+  }
+  .nav-links {
+    display: none;
+  }
+}
+.introduction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .introduction .intro {
-  width: 70%;
-  min-height: 70%;
+  width: 90%;
+  height: 700px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -172,6 +242,27 @@ section {
   flex: 1;
 }
 
+@media screen and (max-width: 844px) {
+  h1 {
+    font-size: 7.2em;
+  }
+  h2 {
+    font-size: 4.8em;
+  }
+}
+@media screen and (max-width: 799px) {
+  .introduction .intro {
+    padding-top: 6rem;
+    width: 95%;
+  }
+  h2 {
+    font-size: 2.4em;
+  }
+}
+.about {
+  height: 100%;
+  padding-bottom: 2rem;
+}
 .about .about-body {
   width: 90%;
   min-height: 70%;
@@ -214,6 +305,17 @@ section {
   padding-bottom: 2rem;
 }
 
+@media screen and (max-width: 1112px) {
+  .about .about-body {
+    flex-direction: column;
+  }
+  .about .about-body .about-top p {
+    font-size: 17px;
+  }
+  .about .about-body .stack-container legend p {
+    font-size: 17px;
+  }
+}
 .project {
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -240,6 +342,8 @@ section {
 .project .project-container .cover .img-cover {
   min-width: 350px;
   max-width: 750px;
+  -o-object-fit: contain;
+     object-fit: contain;
   flex: 1;
 }
 .project .project-container .cover .text-cover {
@@ -307,7 +411,7 @@ section {
     text-align: center;
   }
   .project .project-container .project-name a {
-    font-size: 6px;
+    font-size: 12px;
   }
   .project .project-container .project-name:nth-child(4) {
     text-align: center;
@@ -373,20 +477,42 @@ section {
   }
 }
 .activity {
-  border: 2px solid white;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
+  margin-top: 10rem;
 }
 .activity .activity-container {
-  width: 100%;
-  height: 100%;
-  min-height: 100%;
-  border: 2px solid white;
+  width: 90%;
+  margin: 0 auto;
+}
+.activity .activity-container h1 {
+  padding-bottom: 10%;
+}
+.activity .activity-container .activity-body {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.activity .activity-container .activity-body h2 {
+  font-size: 2.4em;
+}
+.activity .activity-container .activity-body .activity-img {
+  min-width: 150px;
+  max-width: 250px;
+  flex: 1;
 }
 
+@media screen and (max-width: 1000px) {
+  .activity {
+    min-height: 500px;
+  }
+  .activity .activity-body {
+    border-bottom: 2px solid #70e000;
+    padding-bottom: 2rem;
+    flex-direction: column;
+  }
+  .activity .activity-body h2 {
+    font-size: 1.8em !important;
+  }
+}
 .project-page {
   position: absolute;
   background: #001845;
@@ -487,11 +613,20 @@ section {
   width: 90%;
   align-self: center;
 }
+.project-page .project-header .header-alktunes {
+  width: 325px;
+  padding-bottom: 2rem;
+}
+.project-page .project-header .header-shopee {
+  width: 175px;
+  padding-bottom: 2rem;
+}
 .project-page .project-header .project-img {
   width: 90%;
   padding-bottom: 1rem;
 }
 .project-page .project-header .project-head-text {
+  font-size: 4.8em;
   padding-bottom: 1.5rem;
 }
 .project-page .project-body {

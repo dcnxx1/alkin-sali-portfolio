@@ -1,6 +1,8 @@
 @font-face {
-    font-family: 'Roboto',sans-serif;
-    src: url(./Roboto-Light.ttf);
+    font-family: 'Roboto', sans-serif;
+    src: url('./Roboto-Light.ttf') format('truetype');
+    src: url('./roboto-light-webfont.woff') format('woff');
+    src: url('./roboto-light-webfont.woff2') format('woff2');
 }
 
 $roboto: 'Roboto'

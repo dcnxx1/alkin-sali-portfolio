@@ -1,13 +1,16 @@
 @import '../mixins';
 .about{
-    // display: none;
-    // visibility: hidden;
+    height: 100%;
+    padding-bottom: 2rem;
+
     .about-body{
         width: 90%;
         min-height: 70%;
         margin: 0 auto;
         padding: .6rem;
         
+       
+
         gap: 2rem;
         display: flex;
         .about-top{
@@ -37,4 +40,33 @@
     
     }
 
+}
+
+@media screen and (min-width: 1113px){
+    p{
+        
+    }
+}
+
+@media screen and (max-width: 1112px){
+    .about{
+        .about-body{
+
+            .about-top{
+                p{
+                    font-size: 17px;
+                }
+            }
+
+            .stack-container {
+                legend {
+                    p {
+                        font-size: 17px;
+                    }
+                }
+            }
+
+            flex-direction: column;
+        }
+    }
 }

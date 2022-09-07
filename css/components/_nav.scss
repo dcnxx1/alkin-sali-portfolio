@@ -1,7 +1,16 @@
 .logo-container{
     flex: 1;
+    h3{
+        width: fit-content;
+        padding: 0 1rem;
+        cursor: pointer;
+        transition: all .3s ease;
+        user-select: none;
+        &:hover{
+            color: $active-green;
+        }
+    }
 }
-
 
 
 .navigation-container{
@@ -9,11 +18,18 @@
     gap: 2rem;
     align-items: center;
     justify-content: space-evenly;
+    
     flex: 1;
 
+    .nav-menu{
+        display: none;
+    }
     .nav-links{
         transition: all .1s ease-in;
         padding-bottom: .2px;
+        cursor: pointer;
+        user-select: none;
+        
         &:hover, &:focus{
             color: $active-green;
             border-bottom: .3px solid $active-green;
@@ -23,7 +39,12 @@
 
 @media screen and (max-width: 994px){
 
+    nav{
+        left: 5%;
+    }
+
     header {
+      
         h1{
             font-size: 14pt;
         }
@@ -32,4 +53,18 @@
         }
     }
     
+}
+
+@media screen and (max-width: 602px){
+    .navigation-container{
+       
+        .nav-menu{
+            display: block;
+            width: 25px;
+            cursor: pointer;
+        }
+    }
+    .nav-links{
+        display: none;
+    }
 }

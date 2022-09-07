@@ -68,13 +68,23 @@
         text-align: center;
         width: 90%;
         align-self: center;
-       
+        
+        .header-alktunes{
+            width: 325px;
+            padding-bottom: 2rem;    
+        }
+
+        .header-shopee{
+            width: 175px;
+            padding-bottom: 2rem;
+        }
         .project-img{
             width: 90%;
             padding-bottom: 1rem;
         }
 
         .project-head-text{
+            font-size: $font-big;
             padding-bottom: 1.5rem;
         }
     }
