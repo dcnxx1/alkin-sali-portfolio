@@ -26,8 +26,33 @@
     opacity: 0;
 }
 
-.img-cover{
+.cover-alktunes{
+    opacity: 0;
+    transform: translateX(20%);
+}
+
+.cover-shopee{
+    opacity: 0;
+    transform: translateX(0%);
+}
+
+
+.cover-text{
+    opacity: 0;
+    transform: translateX(20%);
+}
+
+.activity-show-cover{
     opacity: 0;
     transform: translateX(-20%);
 }
 
+.activity-img{
+    opacity: 0;
+    transform: translateX(20%);
+}
+
+.activity-txt{
+    opacity: 0;
+    transform: translateY(20%);
+}

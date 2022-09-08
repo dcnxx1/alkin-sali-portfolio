@@ -279,7 +279,10 @@ bodyBlack.addEventListener('click', e => {
         transform: 'translate(0px, -100%)',
         display : 'none'
     })
-    document.body.overflow = 'scroll'
+    document.body.style.overflow = 'scroll'
+    gsap.to(bodyBlack, {
+        display: 'none'
+    })
 })
 
 
@@ -392,7 +395,6 @@ introTimeline.to('.fader-right', {transform: 'translat(0%, 0%)', opacity: 1, sta
 const aboutTimeLine = gsap.timeline({
     scrollTrigger: {
         trigger: '.about',
-        markers: true,
         start: 'top center'
     }
 })
@@ -404,7 +406,6 @@ aboutTimeLine.to('.about-text-top', {opacity: 1})
 const projectTimeLine = gsap.timeline({
     scrollTrigger: {
        trigger:  '.project-container',
-        markers: true,
         start: 'top center'
     }
 })
@@ -418,8 +419,41 @@ projectTimeLine.to('.proj-cover', {
     opacity: 1,
     transform: 'translateY(0%)'
 })
-.to('.img-cover', {
+.to('.cover-alktunes', {
     opacity: 1,
     transform: 'translateX(0%)',
-    stagger: .4
+})
+.to('.cover-shopee', {
+    opacity: 1,
+    transform: 'translateX(0%)'
+})
+.to('.cover-qrcode', {
+    opacity: 1,
+    transform : 'translateX(0%)',
+    duration: .2
+})
+.to('.cover-text', {
+    opacity: 1,
+    transform: 'translateX(0%)',
+    stagger: .5
+})
+
+const activityTimeline = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.show-activity',
+        start: 'top center',
+    }
+})
+
+activityTimeline.to('.activity-show-cover', {
+    opacity: 1,
+    transform: 'translateX(0%)',
+})
+.to('.activity-img', {
+    opacity: 1,
+    transform: 'translateX(0%)'
+})
+.to('.activity-txt', {
+    opacity: 1,
+    transform: 'translateY(0%)'
 })

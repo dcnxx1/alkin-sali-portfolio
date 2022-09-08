@@ -419,9 +419,9 @@ footer .dot {
   height: fit-content;
   align-items: center;
   justify-content: space-around;
-  padding: 0px 0.5rem;
+  padding: 1rem 0.5rem;
   border: 2px solid transparent;
-  flex: 1;
+  flex: 0 1 250px;
   gap: 1rem;
 }
 .project .project-container .cover .text-cover .cover-links .cover-link img {
@@ -711,9 +711,9 @@ footer .dot {
   height: fit-content;
   align-items: center;
   justify-content: space-around;
-  padding: 0px 0.5rem;
+  padding: 1rem 0.5rem;
   border: 2px solid transparent;
-  flex: 1;
+  flex: 0 1 250px;
   gap: 1rem;
 }
 .project-page .project-footer .cover-links .cover-link img {
@@ -844,7 +844,32 @@ footer .dot {
   opacity: 0;
 }
 
-.img-cover {
+.cover-alktunes {
+  opacity: 0;
+  transform: translateX(20%);
+}
+
+.cover-shopee {
+  opacity: 0;
+  transform: translateX(0%);
+}
+
+.cover-text {
+  opacity: 0;
+  transform: translateX(20%);
+}
+
+.activity-show-cover {
   opacity: 0;
   transform: translateX(-20%);
+}
+
+.activity-img {
+  opacity: 0;
+  transform: translateX(20%);
+}
+
+.activity-txt {
+  opacity: 0;
+  transform: translateY(20%);
 }/*# sourceMappingURL=main.css.map */
