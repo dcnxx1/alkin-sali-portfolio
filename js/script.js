@@ -405,8 +405,8 @@ aboutTimeLine.to('.about-text-top', {opacity: 1})
 
 const projectTimeLine = gsap.timeline({
     scrollTrigger: {
-       trigger:  '.project-container',
-        start: 'top center'
+        trigger:  '.project-container',
+        start: 'top center',
     }
 })
 
@@ -415,29 +415,25 @@ projectTimeLine.to('.proj-cover', {
     transform: 'translateX(0%)',
     duration: 1
 })
-.to('.proj-link', {
-    opacity: 1,
-    transform: 'translateY(0%)'
+.to('.proj-link', { opacity: 1,})
+
+const imgTimeline = gsap.timeline({
+    scrollTrigger: {
+        trigger: 'img-cover',
+        start: 'top-center',
+    }
 })
-.to('.cover-alktunes', {
+.to('.img-cover', {
     opacity: 1,
-    transform: 'translateX(0%)',
 })
-.to('.cover-shopee', {
+.to('.cover-link', {
     opacity: 1,
-    transform: 'translateX(0%)'
-})
-.to('.cover-qrcode', {
-    opacity: 1,
-    transform : 'translateX(0%)',
-    duration: .2
-})
-.to('.cover-text', {
-    opacity: 1,
-    transform: 'translateX(0%)',
-    stagger: .5
+    transform: 'translateY(0%)',
+    stagger: .2,
+    duration: .1
 })
 
+.to('.anim-cover-text', { opacity: 1, })
 const activityTimeline = gsap.timeline({
     scrollTrigger: {
         trigger: '.show-activity',
