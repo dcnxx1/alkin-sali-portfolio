@@ -595,6 +595,7 @@ footer .dot {
   align-items: center;
   cursor: pointer;
   padding: 0.6rem;
+  gap: 0.9rem;
   border: 2px solid #38B000;
   transition: all 0.3s ease-in;
   min-width: 100px;

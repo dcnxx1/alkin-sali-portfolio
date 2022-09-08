@@ -38,7 +38,7 @@ splide.mount()
 
 nextButton.addEventListener('click', e => {
     splide.go('>')
-   removeButtons(splide.lengt, splide.index)
+   removeButtons(splide.length, splide.index)
 })
 
 function removeButtons(length, index){
@@ -65,7 +65,6 @@ function removeButtons(length, index){
 
 previousButton.addEventListener('click',e => {
     splide.go('<')
-    
     removeButtons(splide.length, splide.index)
 })
 
@@ -96,6 +95,7 @@ covers.forEach(cover => {
         
   
         handleOverBody()
+        handleNavDown()
         gsap.fromTo(projectPage, {
             transform: 'translate(0px, -100%)',
             top: `${window.scrollY}px`
@@ -343,7 +343,6 @@ mobileLinks.forEach(link => {
 menuMobile.addEventListener('click', e => {
     showMenuMobile()
 })
-
 
 function showMenuMobile() {
     document.body.style.overflow = "hidden"
