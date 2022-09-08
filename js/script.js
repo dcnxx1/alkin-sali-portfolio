@@ -382,3 +382,44 @@ function showMenuMobile() {
 
     })
 }
+
+
+// EFFECTS
+
+const introTimeline  = gsap.timeline();
+introTimeline.to('.fader-right', {transform: 'translat(0%, 0%)', opacity: 1, stagger: 1, duration : .1})
+
+const aboutTimeLine = gsap.timeline({
+    scrollTrigger: {
+        trigger: '.about',
+        markers: true,
+        start: 'top center'
+    }
+})
+
+aboutTimeLine.to('.about-text-top', {opacity: 1})
+.to('.about-container-stack', {opacity: 1, transform: 'translateX(0%)'})
+.to('.about-card-show', {opacity: 1, transform: 'translateX(0%)' , stagger: .1})
+
+const projectTimeLine = gsap.timeline({
+    scrollTrigger: {
+       trigger:  '.project-container',
+        markers: true,
+        start: 'top center'
+    }
+})
+
+projectTimeLine.to('.proj-cover', {
+    opacity: 1,
+    transform: 'translateX(0%)',
+    duration: 1
+})
+.to('.proj-link', {
+    opacity: 1,
+    transform: 'translateY(0%)'
+})
+.to('.img-cover', {
+    opacity: 1,
+    transform: 'translateX(0%)',
+    stagger: .4
+})

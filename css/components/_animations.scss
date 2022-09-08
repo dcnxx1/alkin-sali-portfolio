@@ -1,0 +1,33 @@
+.fader-right{
+    opacity: 0;
+    transform: 'translate(0%, -50%)'
+}
+
+.about-text-top{
+    opacity: 0;
+}
+
+.about-container-stack{
+    opacity: 0;
+    transform: translateX(20%);
+    overflow: hidden;
+}
+
+.about-card-show{
+    opacity: 0;
+    transform: translateX(40%);
+}
+.proj-cover{
+    opacity: 0;
+    transform: translateX(-20%);
+}
+
+.proj-link{
+    opacity: 0;
+}
+
+.img-cover{
+    opacity: 0;
+    transform: translateX(-20%);
+}
+
