@@ -1,0 +1,63 @@
+.menu-mobile{
+    position: absolute;
+    height: 100%;
+    display: none;
+    min-width: 70vw;
+    background: $card-blue;
+    transform: translateX(100%);
+    right: 0%;
+    
+    // display: none;
+    z-index: 100;
+
+    display: flex;
+
+    ul{
+        padding: 1rem;
+        width: 100%;
+        li{
+            padding: 2rem 0rem;
+           
+            text-align: right;
+            width: 90%;
+            margin-left: auto;
+            font-size: 12pt;
+            position: relative;
+            transition: all .3s ease;
+            
+            p{
+                padding: 0 2rem;
+            }
+           &:not(:first-child){
+            cursor: pointer;
+                &:hover{
+                    background: $inactive-green;
+                    p {
+                        color: $card-blue;
+                    }
+                }
+           }
+
+           
+           
+        }
+        .menu-cover{
+        
+        }
+
+       
+
+        .mobile-cv{
+            
+            display: flex;
+            justify-content: right;
+            gap: 2rem;
+            align-items: center;
+            .external-icon{
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+
+}

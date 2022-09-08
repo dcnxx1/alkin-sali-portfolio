@@ -80,7 +80,9 @@
         width: 45px;
         height: 45px;
     }
-
+    p{
+        font-size: 15px;
+    }
     &:hover{
         @include active-buttons;
     }

@@ -19,11 +19,26 @@ body {
   font-family: "Roboto";
   margin: 0 auto;
   position: relative;
+  overflow-x: hidden !important;
 }
 
 header, section, main, footer, nav {
   max-width: 2500px;
   margin: 0 auto;
+}
+
+li {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+button {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 header {
@@ -36,9 +51,6 @@ header {
 nav {
   color: #38B000;
   font-family: "Roboto";
-  width: 100%;
-  height: 100%;
-  display: flex;
   padding: 0.5em;
   font-size: 2.4em;
 }
@@ -107,8 +119,13 @@ section {
   height: 100%;
   width: 100%;
   z-index: 9;
-  background: rgba(0, 0, 0, 0.7);
   position: absolute;
+  /* From https://css.glass */
+  background: rgba(0, 40, 85, 0.56);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
 }
 
 footer {
@@ -150,8 +167,29 @@ footer .dot {
     font-size: 14pt;
   }
 }
-.logo-container {
+.nav {
+  position: static;
+  display: flex;
+  height: 100px;
+  z-index: 55;
+  box-shadow: 2px 2px 3px #001845;
+  opacity: 0.9;
+  width: 100%;
+}
+.nav .navigation-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: right;
   flex: 1;
+  align-items: center;
+}
+
+.logo-container {
+  align-items: center;
+  display: flex;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
 }
 .logo-container h3 {
   width: -webkit-fit-content;
@@ -171,13 +209,22 @@ footer .dot {
 
 .navigation-container {
   display: flex;
-  gap: 2rem;
-  align-items: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: right;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  padding: 0 2rem;
   justify-content: space-evenly;
-  flex: 1;
+  align-items: center;
 }
 .navigation-container .nav-menu {
   display: none;
+}
+.navigation-container li {
+  padding: 0rem 2rem;
 }
 .navigation-container .nav-links {
   transition: all 0.1s ease-in;
@@ -194,8 +241,13 @@ footer .dot {
 }
 
 @media screen and (max-width: 994px) {
-  nav {
-    left: 5%;
+  .nav .nav-menu {
+    display: block;
+    width: 25px;
+    cursor: pointer;
+  }
+  .nav .nav-links {
+    display: none;
   }
   header h1 {
     font-size: 14pt;
@@ -205,13 +257,11 @@ footer .dot {
   }
 }
 @media screen and (max-width: 602px) {
-  .navigation-container .nav-menu {
-    display: block;
-    width: 25px;
-    cursor: pointer;
+  .nav {
+    height: 80px;
   }
-  .nav-links {
-    display: none;
+  .navigation-container li:not(:first-child) {
+    padding: 0;
   }
 }
 .introduction {
@@ -279,7 +329,7 @@ footer .dot {
   display: flex;
   border: 2px solid #70e000;
   border-radius: 10px;
-  padding: 0.5rem;
+  padding: 1rem;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -340,10 +390,8 @@ footer .dot {
   padding-top: 2rem;
 }
 .project .project-container .cover .img-cover {
-  min-width: 350px;
+  min-width: 320px;
   max-width: 750px;
-  -o-object-fit: contain;
-     object-fit: contain;
   flex: 1;
 }
 .project .project-container .cover .text-cover {
@@ -380,6 +428,9 @@ footer .dot {
   width: 45px;
   height: 45px;
 }
+.project .project-container .cover .text-cover .cover-links .cover-link p {
+  font-size: 15px;
+}
 .project .project-container .cover .text-cover .cover-links .cover-link:hover {
   border: 2px solid #70e000;
 }
@@ -391,18 +442,21 @@ footer .dot {
   padding-bottom: 0;
 }
 
+@media screen and (max-width: 1435px) {
+  .project .cover .text-cover .cover-text {
+    font-size: clamp(7px, 0.6vw, 0.8vw);
+  }
+  .project .cover .text-cover .cover-links .cover-link p {
+    font-size: 10pt;
+  }
+}
 @media screen and (max-width: 1165px) {
   .project .project-container .cover .text-cover .cover-links {
     border: 2px solid transparent;
     flex: 0;
   }
   .project .project-container .cover .text-cover .cover-links .cover-link {
-    font-size: 7px;
-  }
-}
-@media screen and (max-width: 844px) {
-  .cover {
-    position: relative;
+    font-size: 4px;
   }
 }
 @media screen and (max-width: 770px) {
@@ -633,7 +687,7 @@ footer .dot {
   padding-top: 0.5rem;
   width: 90%;
   align-self: center;
-  font-size: 9pt;
+  font-size: 7pt;
   flex: 1;
 }
 .project-page .project-footer {
@@ -665,6 +719,9 @@ footer .dot {
   width: 45px;
   height: 45px;
 }
+.project-page .project-footer .cover-links .cover-link p {
+  font-size: 15px;
+}
 .project-page .project-footer .cover-links .cover-link:hover {
   border: 2px solid #70e000;
 }
@@ -675,7 +732,7 @@ footer .dot {
   width: 25px;
 }
 .project-page .project-splide-wrapper {
-  height: 100%;
+  height: 90%;
 }
 .project-page .project-splide-wrapper .project-splide-track {
   height: 100%;
@@ -684,7 +741,6 @@ footer .dot {
   height: 100%;
 }
 .project-page .project-splide-wrapper .project-splide-track .project-splide-list .project-splide-slide {
-  background: transparent;
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -699,7 +755,61 @@ footer .dot {
   display: flex;
   align-items: center;
 }
+.project-page .project-splide-wrapper .project-splide-track .project-splide-list .project-splide-slide .project-footer .cover-links .cover-link {
+  display: flex;
+  flex-direction: column;
+}
 .project-page .project-splide-wrapper .project-splide-track .project-splide-list .project-splide-slide .project-footer .cover-links .cover-link img {
   width: 35px;
   height: 35px;
+}
+.project-page .project-splide-wrapper .project-splide-track .project-splide-list .project-splide-slide .project-footer .cover-links .cover-link .icon-text {
+  font-size: 8pt;
+}
+
+.menu-mobile {
+  position: absolute;
+  height: 100%;
+  display: none;
+  min-width: 70vw;
+  background: #001845;
+  transform: translateX(100%);
+  right: 0%;
+  z-index: 100;
+  display: flex;
+}
+.menu-mobile ul {
+  padding: 1rem;
+  width: 100%;
+}
+.menu-mobile ul li {
+  padding: 2rem 0rem;
+  text-align: right;
+  width: 90%;
+  margin-left: auto;
+  font-size: 12pt;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.menu-mobile ul li p {
+  padding: 0 2rem;
+}
+.menu-mobile ul li:not(:first-child) {
+  cursor: pointer;
+}
+.menu-mobile ul li:not(:first-child):hover {
+  background: #38B000;
+}
+.menu-mobile ul li:not(:first-child):hover p {
+  color: #001845;
+}
+.menu-mobile ul .mobile-cv {
+  display: flex;
+  justify-content: right;
+  gap: 2rem;
+  align-items: center;
+}
+.menu-mobile ul .mobile-cv .external-icon {
+  width: 25px;
+  height: 25px;
 }/*# sourceMappingURL=main.css.map */

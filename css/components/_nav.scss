@@ -1,5 +1,27 @@
+.nav{
+    position: static;
+    display: flex;
+    // border: 2px solid black;
+    height: 100px;
+    z-index: 55;
+    box-shadow: 2px 2px 3px $card-blue;
+    opacity: .9;
+    width: 100%;
+
+    .navigation-wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        flex: 1;
+        align-items: center;
+    }
+}
+
+
 .logo-container{
-    flex: 1;
+    align-items: center;
+    display: flex;
+    min-width: fit-content;
     h3{
         width: fit-content;
         padding: 0 1rem;
@@ -15,14 +37,21 @@
 
 .navigation-container{
     display: flex;
-    gap: 2rem;
-    align-items: center;
+    height: fit-content;
+    text-align: right;
+    min-width: fit-content;
+    padding: 0 2rem;
     justify-content: space-evenly;
+    align-items: center;
     
-    flex: 1;
-
     .nav-menu{
         display: none;
+    }
+    li{
+        padding: 0rem 2rem;
+       &:not(:first-child){
+        // padding: 0rem 2rem;
+       }
     }
     .nav-links{
         transition: all .1s ease-in;
@@ -38,13 +67,23 @@
 }
 
 @media screen and (max-width: 994px){
+   .nav{
 
-    nav{
-        left: 5%;
+    .nav-menu{
+        display: block;
+        width: 25px;
+        cursor: pointer;
     }
-
+    .nav-links{
+        display: none;
+    }
+   }
+   
     header {
-      
+        nav{
+
+           }
+        
         h1{
             font-size: 14pt;
         }
@@ -56,15 +95,16 @@
 }
 
 @media screen and (max-width: 602px){
+    .nav{
+        height: 80px;
+    }
     .navigation-container{
        
-        .nav-menu{
-            display: block;
-            width: 25px;
-            cursor: pointer;
-        }
+        li{
+            &:not(:first-child){
+             padding: 0;
+            }
+         }
     }
-    .nav-links{
-        display: none;
-    }
+   
 }

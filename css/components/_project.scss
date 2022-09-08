@@ -2,7 +2,7 @@
 
 .project{
     height: fit-content;
-
+    // border: 2px solid white;
     .project-container{
         width: 90%;
         min-height: 100%;
@@ -26,9 +26,9 @@
             padding-bottom: 2rem;
             padding-top: 2rem;
             .img-cover{
-                min-width: 350px;
+                min-width: 320px;
                 max-width: 750px;
-                object-fit: contain;
+                // object-fit: contain;
                 flex: 1;
             }
 
@@ -80,10 +80,21 @@
 
 @media screen and (max-width: 1435px){
     .project{
+        
         .cover{
             .text-cover{
-                .cover-links{
+                .cover-text{
+                    // font-size: 2pt !important;
+                    // font-size: .6vw !important;
+                    font-size: clamp(7px, .6vw, .8vw);
                     
+                }
+                .cover-links{
+                    .cover-link{
+                        p{
+                            font-size: 10pt;
+                        }
+                    }
                 }
             }
         }
@@ -92,19 +103,21 @@
 
 @media screen and (max-width: 1165px){
     .project{
-       
+    
         .project-container{
           
             .cover{
                 .text-cover{
-                  
+                    .cover-text{
+                    
+                    }
                     .cover-links{
                         border: 2px solid transparent;
                         flex: 0;
                        
                        
                         .cover-link{
-                            font-size: 7px;
+                            font-size: 4px;
                         }
                     }
                 }
@@ -118,7 +131,7 @@
 
     .cover{
        
-        position: relative;
+      
         .img-cover{
        
         }

@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Alkin Sali</title>
     <link rel="stylesheet" href="./css/main.css" type="text/css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.15/dist/css/splide-core.min.css">
     <script defer src="./js/script.js"></script>
 </head>
     <body>
+        <div class="menu-mobile">
+         <ul>
+            <li class="menu-cover"><p>Menu</p></li>
+            <li class="mobile-link" data-mobile-link="about" ><p>Over</p> <span class="slider"></span></li>
+            <li class="mobile-link" data-mobile-link="project" ><p>Projecten</p><span class="slider"></span> </li>
+            <li class="mobile-link" data-mobile-link="activity" ><p>Activiteit</p> <span class="slider"></span></li>
+            <li class="mobile-link" data-mobile-link="contact" ><p>Contact</p> <span class="slider"></span></li>
+            <li data-mobile-link="resume"  class="mobile-cv mobile-link"><p>CV</p><img class="external-icon" src="./assets/icons/externalcv.png" /></li>
+         </ul>
+            
+        </div>
        <div class="body-black"></div>
         <div class="project-page">
           <div class="project-head">
@@ -92,7 +104,7 @@
                             </a>
                             <a class="cover-link live-web" href="https://shopee-frontend.herokuapp.com/" target="_blank">
                                 <img src="./assets/icons/live.png" alt="live www website github alkin Sali qrcode Generator">
-                                <p class="icon-text"> Website</p>
+                                <p class="icon-text">Website</p>
                             </a>
                         </div>
                     </div>
@@ -130,18 +142,20 @@
           
         </div>
         <header>
-            <nav>
+            <nav class="nav">
                 <div id="myname" class="logo-container">
                     <h3 class="logo-name">Alkin Sali</h3>
                 </div>
-                <ul class="navigation-container">
-                    <li><a class="nav-links" data-link="about" >Over</a></li>
-                    <li><a class="nav-links" data-link="project" >Projecten</a></li>
-                    <li><a class="nav-links" data-link="activity" >Activiteit</a></li>
-                    <li><a class="nav-links"  >Contact</a></li>
-                    <li><a class="nav-links"  >CV</a></li>
-                    <li><img class="nav-menu" src="./assets/icons/menu.png" /></li>
-                </ul>
+                <div class="navigation-wrapper">
+                    <ul class="navigation-container">
+                        <li><a class="nav-links" data-link="about" >Over</a></li>
+                        <li><a class="nav-links" data-link="project" >Projecten</a></li>
+                        <li><a class="nav-links" data-link="activity" >Activiteit</a></li>
+                        <li><a class="nav-links">Contact</a></li>
+                        <li><a class="nav-links">CV</a></li>
+                        <li><img class="nav-menu" src="./assets/icons/menu.png" /></li>
+                    </ul>
+                </div>
             </nav>
         </header>
 
