@@ -1,0 +1,74 @@
+.portfolio {}
+
+.portfolio-head {
+    display: flex;
+    height: 100px;
+}
+
+.portfolio-back {
+    display: flex;
+    flex: 1;
+    padding-left: 2rem;
+}
+
+.link-back {
+
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 25px;
+        height: 25px;
+        transform: rotate(180deg);
+
+    }
+
+    p {
+        transition: all .2s ease;
+        padding-bottom: .1rem;
+        border-bottom: 2px solid transparent;
+
+        &:hover {
+            border-bottom: 2px solid $active-green;
+            color: $active-green;
+        }
+    }
+}
+
+.portfolio-download {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.download-link {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+
+    justify-content: right;
+    gap: 2rem;
+}
+
+.text-pdf {}
+
+.external-icon {
+    width: 25px;
+    height: 25px;
+}
+
+
+.resume-container {
+    border: 2px solid white;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.pdf-img {
+    object-fit: cover;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(50%);
+    scale: 1.4;
+    box-shadow: 2px 2px 2px black;
+}

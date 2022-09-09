@@ -267,6 +267,9 @@ footer .dot {
   .nav .nav-links {
     display: none;
   }
+  .nav .nav-resume {
+    display: none;
+  }
   header h1 {
     font-size: 14pt;
   }
@@ -814,7 +817,7 @@ footer .dot {
   padding: 1rem;
   width: 100%;
 }
-.menu-mobile ul li {
+.menu-mobile ul .mobile-link {
   padding: 2rem 0rem;
   text-align: right;
   width: 90%;
@@ -823,16 +826,16 @@ footer .dot {
   position: relative;
   transition: all 0.3s ease;
 }
-.menu-mobile ul li p {
+.menu-mobile ul .mobile-link p {
   padding: 0 2rem;
 }
-.menu-mobile ul li:not(:first-child) {
+.menu-mobile ul .mobile-link:not(:first-child) {
   cursor: pointer;
 }
-.menu-mobile ul li:not(:first-child):hover {
+.menu-mobile ul .mobile-link:not(:first-child):hover {
   background: #38B000;
 }
-.menu-mobile ul li:not(:first-child):hover p {
+.menu-mobile ul .mobile-link:not(:first-child):hover p {
   color: #001845;
 }
 .menu-mobile ul .mobile-cv {
@@ -999,4 +1002,67 @@ footer .dot {
   .contact-item h1 a {
     font-size: 18pt;
   }
+}
+.portfolio-head {
+  display: flex;
+  height: 100px;
+}
+
+.portfolio-back {
+  display: flex;
+  flex: 1;
+  padding-left: 2rem;
+}
+
+.link-back {
+  display: flex;
+  align-items: center;
+}
+.link-back img {
+  width: 25px;
+  height: 25px;
+  transform: rotate(180deg);
+}
+.link-back p {
+  transition: all 0.2s ease;
+  padding-bottom: 0.1rem;
+  border-bottom: 2px solid transparent;
+}
+.link-back p:hover {
+  border-bottom: 2px solid #70e000;
+  color: #70e000;
+}
+
+.portfolio-download {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.download-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: right;
+  gap: 2rem;
+}
+
+.external-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.resume-container {
+  border: 2px solid white;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.pdf-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(50%);
+  scale: 1.4;
+  box-shadow: 2px 2px 2px black;
 }/*# sourceMappingURL=main.css.map */

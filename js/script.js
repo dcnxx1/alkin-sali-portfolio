@@ -185,8 +185,8 @@ navLinks.forEach(link => {
         const attr = link.getAttribute('data-link')
         if (attr === 'contact') {
             revealContact()
-        } else if (attr === 'cv') {
-
+        } else if (attr === 'resume') {
+            window.location.href = "../cv.html"
         } else {
             gsap.to(window, { duration: 1.3, scrollTo: { y: `#${attr}`, offsetY: getWidth(attr) }, ease: "power2" })
         }
@@ -522,3 +522,4 @@ function closeContact() {
     handleNavUp()
 
 }
+

@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alkin Sali CV</title>
-    <link rel="stylesheet" href="portfolio.scss" type="text/css"/>
+    <link rel="stylesheet" href="./css/main.css" type="text/css" />
+    <script defer src="./js/cv.js"></script>
 </head>
+
 <body>
-    
+    <section class="portfolio">
+        <div class="portfolio-head">
+            <div class="portfolio-back">
+                <a class="link-back" href="./index.html">
+                    <img src="./assets/icons/next(1).png" />
+                    <p>Terug</p>
+                </a>
+            </div>
+            <div class="portfolio-download">
+                <a class="download-link" href="./projects.json" download>
+                    <p class="text-pdf">PDF</p> <img class="external-icon" src="./assets/icons/externalcv.png" />
+                </a>
+            </div>
+        </div>
+
+        <div class="resume-container">
+            <img class="pdf-img" src="./assets/alkincv.jpg" />
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollToPlugin.min.js"></script>
 </body>
+
 </html>
