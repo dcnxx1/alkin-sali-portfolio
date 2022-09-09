@@ -44,6 +44,33 @@
     justify-content: space-evenly;
     align-items: center;
     
+    .nav-resume{
+        height: 5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        width: 100%;
+        
+        .external-icon{
+            
+            width: 20px;
+            height: 20px;
+            transform: translate(50%, -40%);
+            transition: all .2s ease;
+
+           
+        }
+
+        &:hover{
+            .external-icon{
+                scale: 1.1;
+            }
+        }
+    }
+
+
     .nav-menu{
         display: none;
     }

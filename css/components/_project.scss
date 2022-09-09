@@ -127,13 +127,36 @@
     }
 }
 
+@media screen and (max-width: 994px){
+    .project{
+        .project-container{
+            .project-name{
+                h2{
+                    font-size: 14pt;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 844px){
 
-    .cover{
-       
-      
-        .img-cover{
-       
+    .project-container{
+     
+        .cover-section{
+            font-size: 24pt;
+
+        }
+
+        .cover{
+            .text-cover{
+                .cover-text{
+                    p{
+                        line-height: 2.5;
+                    }
+                }
+               
+            }
         }
     }
 }
