@@ -1,475 +1,580 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
     <title>Alkin Sali</title>
     <link rel="stylesheet" href="./css/main.css" type="text/css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.15/dist/css/splide-core.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.15/dist/css/splide-core.min.css"
+    />
     <script defer src="./js/script.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="cta-contact">
-        <div class="contact-header">
-            <h1>Contact</h1>
-            <div class="close-container">
-                <img class="close-contact" src="./assets/icons/close(1).png" />
-            </div>
+      <div class="contact-header">
+        <h1>Contact</h1>
+        <div class="close-container">
+          <img class="close-contact" src="./assets/icons/close(1).png" />
         </div>
-        <div class="contact-body">
-            <div class="contact-message">
-                <p>Stuur mij gerust een e-mail</p>
-            </div>
-            <div class="contact-item">
-                <h1>Email : <a href="mailto:alkisali1@hotmail.com">alkisali1@hotmail.com</a></h1>
-            </div>
+      </div>
+      <div class="contact-body">
+        <div class="contact-message">
+          <p>Stuur mij gerust een e-mail</p>
         </div>
+        <div class="contact-item">
+          <h1>
+            Email :
+            <a href="mailto:alkisali1@hotmail.com">alkisali1@hotmail.com</a>
+          </h1>
+        </div>
+      </div>
     </div>
     <div class="menu-mobile">
-        <ul>
-            <li class="menu-cover">
-                <p>Menu</p>
-            </li>
-            <li class="mobile-link" data-mobile-link="about">
-                <p>Over</p> <span class="slider"></span>
-            </li>
-            <li class="mobile-link" data-mobile-link="project">
-                <p>Projecten</p><span class="slider"></span>
-            </li>
-            <li class="mobile-link" data-mobile-link="activity">
-                <p>Activiteit</p> <span class="slider"></span>
-            </li>
-            <li class="mobile-link" data-mobile-link="contact">
-                <p>Contact</p> <span class="slider"></span>
-            </li>
-            <a href="./cv.html" data-mobile-link="resume" class="mobile-cv mobile-link">
-                <p>CV</p><img class="external-icon" src="./assets/icons/externalcv.png" />
-            </a>
-        </ul>
-
+      <ul>
+        <li class="menu-cover">
+          <p>Menu</p>
+        </li>
+        <li class="mobile-link" data-mobile-link="about">
+          <p>Over</p>
+          <span class="slider"></span>
+        </li>
+        <li class="mobile-link" data-mobile-link="project">
+          <p>Projecten</p>
+          <span class="slider"></span>
+        </li>
+        <li class="mobile-link" data-mobile-link="contact">
+          <p>Contact</p>
+          <span class="slider"></span>
+        </li>
+        <a
+          href="./cv.html"
+          data-mobile-link="resume"
+          class="mobile-cv mobile-link"
+        >
+          <p>CV</p>
+          <img class="external-icon" src="./assets/icons/externalcv.png" />
+        </a>
+      </ul>
     </div>
     <div class="body-black"></div>
     <div class="project-page">
-        <div class="project-head">
-            <div class="project-escape">
-                <img class="escape-icon" src="./assets/icons/close(1).png" />
-                <p>Afsluiten</p>
-            </div>
+      <div class="project-head">
+        <div class="project-escape">
+          <img class="escape-icon" src="./assets/icons/close(1).png" />
+          <p>Afsluiten</p>
+        </div>
 
-            <div class="project-nav">
-                <div class="nav-con">
-                    <div class="go-previous">
-                        <img src="./assets/icons/next(1).png" />
-                        <p>Vorige</p>
-                    </div>
-                    <div class="go-next">
-                        <p>Volgende</p>
-                        <img src="./assets/icons/next(1).png" />
-                    </div>
+        <div class="project-nav">
+          <div class="nav-con">
+            <div class="go-previous">
+              <img src="./assets/icons/next(1).png" />
+              <p>Vorige</p>
+            </div>
+            <div class="go-next">
+              <p>Volgende</p>
+              <img src="./assets/icons/next(1).png" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="splide project-splide-wrapper">
+        <div class="splide__track project-splide-track">
+          <ul class="splide__list project-splide-list">
+            <li id="alktunes" class="splide__slide project-splide-slide">
+              <div class="project-header">
+                <img
+                  class="header-alktunes"
+                  src="./assets/icons/alktune_full_png.png"
+                />
+              </div>
+
+              <div class="project-body">
+                <p>
+                  Alktunes is een full-stack applicatie gemaakt met React en
+                  NodeJS dat gehost wordt op AWS. <br />
+                  <br />
+                  MySQL wordt gebruik gemaakt om gebruikersgegevens op te slaan.
+                  <br />
+                  Alktunes maakt gebruik van een NoSQL database om playlisten te
+                  creëren en te verwijderen. In deze playlisten kunnen ook
+                  nummers toegoevoegd en verwijderd worden. <br />
+                  <br />
+                  Om de 3 uur gaat een Lambda functie af waardoor de inhoud in
+                  de Trending en Feature sectie wordt ververst.
+                  <br />
+                  <br />
+                  De applicatie heeft in totaal 87 nummers met 5 albums van 5
+                  artiesten.
+                </p>
+              </div>
+
+              <div class="project-footer">
+                <div class="cover-links">
+                  <a
+                    class="cover-link git-front"
+                    href="https://github.com/dcnxx1/alktunes/tree/main1"
+                    target="_blank"
+                  >
+                    <img
+                      src="./assets/icons/githtml.png"
+                      alt="git github html logo Alkin Sali qrCode Generator"
+                    />
+                    <p class="icon-text">Front-end source</p>
+                  </a>
+                  <a
+                    class="cover-link git-back"
+                    href="https://github.com/dcnxx1/alktunes_server"
+                    target="_blank"
+                  >
+                    <img
+                      src="./assets/icons/gitserver.png"
+                      alt="git github server logo Alkin Sali qrCode Generator"
+                    />
+                    <p class="icon-text">Back-end source</p>
+                  </a>
+                  <a
+                    class="cover-link live-web"
+                    href="https://ik.imagekit.io/9r9n2dtpgk/alktunes_demo__pJgNz1Yk.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1664215211656"
+                    target="_blank"
+                  >
+                    <img
+                      src="./assets/icons/live.png"
+                      alt="live www website github alkin Sali qrcode Generator"
+                    />
+                    <p class="icon-text">Demo Video</p>
+                  </a>
                 </div>
-            </div>
+              </div>
+            </li>
+            <li id="shopee" class="splide__slide project-splide-slide">
+              <div class="project-header">
+                <img
+                  class="header-shopee"
+                  src="./assets/icons/sshopeelogopng.png"
+                />
+              </div>
+
+              <div class="project-body">
+                <p>
+                  Shopeee is een full-stack e-commerce site gemaakt met React en
+                  NodeJS dat gehost wordt op Heroku. <br />
+                  Alle artikelen worden opgehaald van een MySQL database.
+                  Artikelen kunnen worden opgeslagen en de hoeveelheid van een
+                  artikel kan worden verhoogd of verlaagd. <br />
+                  <br />
+                  Na het bestellen van alle artikelen wordt de gebruiker
+                  doorgewezen naar een pagina waar hen bestelde artikelen in een
+                  factuur kunnen worden teruggevonden. In de factuur staat wat
+                  de gebruiker heeft besteld, het aantal artikelen, de prijs
+                  voor elke artikel, de BTW en het totaalbedrag.
+                </p>
+              </div>
+
+              <div class="project-footer">
+                <div class="cover-links">
+                  <a
+                    class="cover-link git-front"
+                    href="https://github.com/dcnxx1/shopee_frontend"
+                    target="_blank"
+                  >
+                    <img
+                      src="./assets/icons/githtml.png"
+                      alt="git github html logo Alkin Sali qrCode Generator"
+                    />
+                    <p class="icon-text">Front-end source</p>
+                  </a>
+                  <a
+                    class="cover-link git-back"
+                    href="https://github.com/dcnxx1/shopee-backend"
+                    target="_blank"
+                  >
+                    <img
+                      src="./assets/icons/gitserver.png"
+                      alt="git github server logo Alkin Sali qrCode Generator"
+                    />
+                    <p class="icon-text">Back-end source</p>
+                  </a>
+               
+                </div>
+              </div>
+            </li>
+            <li id="qrcode" class="splide__slide project-splide-slide">
+              <div class="project-header">
+                <h1 class="project-head-text">QRCode</h1>
+              </div>
+
+              <div class="project-body">
+                <p>
+                  Verborgen informatie, links naar andere websites of een SMS
+                  versturen via een foto met zwart-witte puntjes, kunnen alleen
+                  de slimste techneuten hebben bedacht. Op mijn website kun je
+                  tussen een V-card, SMS, Text en een E-mail QRCode kiezen.
+                </p>
+              </div>
+
+              <div class="project-footer">
+                <div class="cover-links">
+                  <a
+                    class="cover-link git-front"
+                    href="https://github.com/dcnxx1/qrCode"
+                    target="_blank"
+                  >
+                    <img
+                      src="./assets/icons/githtml.png"
+                      alt="git github html logo Alkin Sali qrCode Generator"
+                    />
+                    <p class="icon-text">Front-end source</p>
+                  </a>
+                  <a
+                    class="cover-link git-back"
+                    href="https://github.com/dcnxx1/qrcode-backend"
+                    target="_blank"
+                  >
+                    <img
+                      src="./assets/icons/gitserver.png"
+                      alt="git github server logo Alkin Sali qrCode Generator"
+                    />
+                    <p class="icon-text">Back-end source</p>
+                  </a>
+              
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
-
-        <div class="splide project-splide-wrapper">
-            <div class="splide__track project-splide-track">
-                <ul class="splide__list project-splide-list">
-                    <li id="alktunes" class="splide__slide project-splide-slide">
-                        <div class="project-header">
-
-                            <img class="header-alktunes" src="./assets/icons/alktune_full_png.png" />
-                        </div>
-
-                        <div class="project-body">
-                            <p>Alktunes is een full-stack applicatie gemaakt met React en NodeJS dat gehost wordt op
-                                AWS. <br /> <br /> MySQL wordt gebruik gemaakt om gebruikersgegevens op te slaan.
-                                <br /> Alktunes maakt gebruik van een NoSQL database om playlisten te creëren en te
-                                verwijderen. In deze playlisten kunnen ook nummers toegoevoegd en verwijderd worden.
-                                <br /> <br />
-                                Om de 3 uur gaat een Lambda functie af waardoor de inhoud in de Trending en Feature
-                                sectie wordt ververst.
-                                <br /> <br />
-                                De applicatie heeft in totaal 87 nummers met 5 albums van 5 artiesten.
-                            </p>
-                        </div>
-
-                        <div class="project-footer">
-                            <div class="cover-links">
-                                <a class="cover-link git-front" href="https://github.com/dcnxx1/alktunes/tree/main1"
-                                    target="_blank">
-                                    <img src="./assets/icons/githtml.png"
-                                        alt="git github html logo Alkin Sali qrCode Generator" />
-                                    <p class="icon-text">Front-end source</p>
-                                </a>
-                                <a class="cover-link git-back" href="https://github.com/dcnxx1/alktunes_server"
-                                    target="_blank">
-                                    <img src="./assets/icons/gitserver.png"
-                                        alt="git github server logo Alkin Sali qrCode Generator" />
-                                    <p class="icon-text">Back-end source</p>
-                                </a>
-                                <a class="cover-link live-web" href="https://ik.imagekit.io/9r9n2dtpgk/alktunes_demo__pJgNz1Yk.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1664215211656" target="_blank">
-                                    <img src="./assets/icons/live.png"
-                                        alt="live www website github alkin Sali qrcode Generator">
-                                    <p class="icon-text">Demo Video</p>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li id="shopee" class="splide__slide project-splide-slide">
-                        <div class="project-header">
-
-                            <img class="header-shopee" src="./assets/icons/sshopeelogopng.png" />
-                        </div>
-
-                        <div class="project-body">
-                            <p>Shopeee is een full-stack e-commerce site gemaakt met React en NodeJS dat gehost wordt op
-                                Heroku. <br /> Alle artikelen worden opgehaald van een MySQL database.
-                                Artikelen kunnen worden opgeslagen en de hoeveelheid van een artikel kan worden verhoogd
-                                of verlaagd. <br /> <br /> Na het bestellen van alle artikelen wordt de gebruiker
-                                doorgewezen
-                                naar een pagina waar hen bestelde artikelen in een factuur kunnen worden teruggevonden.
-                                In de factuur staat wat de gebruiker heeft besteld, het aantal artikelen,
-                                de prijs voor elke artikel, de BTW en het totaalbedrag.</p>
-                        </div>
-
-                        <div class="project-footer">
-                            <div class="cover-links">
-                                <a class="cover-link git-front" href="https://github.com/dcnxx1/shopee_frontend"
-                                    target="_blank">
-                                    <img src="./assets/icons/githtml.png"
-                                        alt="git github html logo Alkin Sali qrCode Generator" />
-                                    <p class="icon-text">Front-end source</p>
-                                </a>
-                                <a class="cover-link git-back" href="https://github.com/dcnxx1/shopee-backend"
-                                    target="_blank">
-                                    <img src="./assets/icons/gitserver.png"
-                                        alt="git github server logo Alkin Sali qrCode Generator" />
-                                    <p class="icon-text">Back-end source</p>
-                                </a>
-                                <a class="cover-link live-web" href="https://shopee-frontend.herokuapp.com/"
-                                    target="_blank">
-                                    <img src="./assets/icons/live.png"
-                                        alt="live www website github alkin Sali qrcode Generator">
-                                    <p class="icon-text">Website</p>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li id="qrcode" class="splide__slide project-splide-slide">
-                        <div class="project-header">
-                            <h1 class="project-head-text">QRCode</h1>
-                        </div>
-
-                        <div class="project-body">
-                            <p>Verborgen informatie, links naar andere websites of een SMS versturen via een foto met
-                                zwart-witte puntjes, kunnen alleen de slimste
-                                techneuten hebben bedacht. Op mijn website kun je tussen een V-card, SMS, Text en een
-                                E-mail QRCode kiezen.</p>
-                        </div>
-
-                        <div class="project-footer">
-                            <div class="cover-links">
-                                <a class="cover-link git-front" href="https://github.com/dcnxx1/qrCode" target="_blank">
-                                    <img src="./assets/icons/githtml.png"
-                                        alt="git github html logo Alkin Sali qrCode Generator" />
-                                    <p class="icon-text">Front-end source</p>
-                                </a>
-                                <a class="cover-link git-back" href="https://github.com/dcnxx1/qrcode-backend"
-                                    target="_blank">
-                                    <img src="./assets/icons/gitserver.png"
-                                        alt="git github server logo Alkin Sali qrCode Generator" />
-                                    <p class="icon-text">Back-end source</p>
-                                </a>
-                                <a class="cover-link live-web" href="https://qrcode-frnt.herokuapp.com/"
-                                    target="_blank">
-                                    <img src="./assets/icons/live.png"
-                                        alt="live www website github alkin Sali qrcode Generator">
-                                    <p class="icon-text"> Website</p>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
+      </div>
     </div>
     <header>
-        <nav class="nav">
-            <div id="myname" class="logo-container">
-                <h3 class="logo-name">Alkin Sali</h3>
-            </div>
-            <div class="navigation-wrapper">
-                <ul class="navigation-container">
-                    <li><a class="nav-links" data-link="about">Over</a></li>
-                    <li><a class="nav-links" data-link="project">Projecten</a></li>
-                    <li><a class="nav-links" data-link="activity">Activiteit</a></li>
-                    <li><a class="nav-links" data-link="contact">Contact</a></li>
-                    <li class="nav-resume nav-links" data-link="resume"><a href="./cv.html">CV</a><img
-                            class="external-icon" src="./assets/icons/externalcv.png" /></li>
-                    <li><img class="nav-menu" src="./assets/icons/menu.png" /></li>
-                </ul>
-            </div>
-        </nav>
+      <nav class="nav">
+        <div id="myname" class="logo-container">
+          <h3 class="logo-name">Alkin Sali</h3>
+        </div>
+        <div class="navigation-wrapper">
+          <ul class="navigation-container">
+            <li><a class="nav-links" data-link="about">Over</a></li>
+            <li><a class="nav-links" data-link="project">Projecten</a></li>
+          
+            <li><a class="nav-links" data-link="contact">Contact</a></li>
+            <li class="nav-resume nav-links" data-link="resume">
+              <a href="./cv.html">CV</a
+              ><img class="external-icon" src="./assets/icons/externalcv.png" />
+            </li>
+            <li><img class="nav-menu" src="./assets/icons/menu.png" /></li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <section id="intro" class="introduction">
-            <div class="intro">
-                <div class="intro-top">
-                    <h1 class="fader-right tcover-section">Hi,</h1> <br />
-                    <h2 class="fader-right">Mijn naam is Alkin</h2> <br />
-                    <h2 class="fader-right">Ik ben een full-stack ontwikkelaar</h2>
-                </div>
-                <div class="intro-bottom">
-                    <h2 class="fader-right">Ik maak het internet een stukje mooier. </h2>
+      <section id="intro" class="introduction">
+        <div class="intro">
+          <div class="intro-top">
+            <h1 class="fader-right tcover-section">Hi,</h1>
+            <br />
+            <h2 class="fader-right">Mijn naam is Alkin</h2>
+            <br />
+            <h2 class="fader-right">Ik ben een full-stack ontwikkelaar</h2>
+          </div>
+          <div class="intro-bottom">
+            <h2 class="fader-right">Ik maak het internet een stukje mooier.</h2>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="about">
+        <div class="about-body">
+          <div class="about-top">
+            <h1 class="about-text-top cover-section">Over</h1>
+            <br />
+            <br />
+            <br />
+            <p class="about-text-top">
+              <span>Hallo</span>, ik ben <span>Alkin</span> en ik ben een
+              <span>ontwikkelaar</span> uit <span>Nieuw-Vennep.</span> Ik
+              programmeer al bijna 3 jaar als <span>hobbyist</span>. Ik begon
+              met <span>webontwikkeling</span> in 2019 waarbij ik
+              <span>HTML</span> en <span>CSS </span> begon te mengen om
+              <span>websites</span> te creëren. Paar jaar verder en ik ben trots
+              om mijzelf een <span>full-stack developer</span> te erkennen.
+            </p>
+            <br />
+            <br />
+            <br />
+            <p class="about-text-top">
+              Mijn doel als ontwikkelaar is om het beste product naar buiten te
+              brengen met wensen van de klant als uitgangspunt.
+            </p>
 
-                </div>
+            <br />
+            <p class="about-text-top">
+              Ik doe dit door de meest moderne web-technieken te gebruiken. Van
+              websites maken to servers opzetten - ik doe het allemaal. Voor
+              front-end gebruik ik React en als back-end gebruik ik NodeJS.
+            </p>
+          </div>
+          <fieldset class="about-container-stack stack-container">
+            <legend align="center">
+              <p>Mijn stack</p>
+            </legend>
+            <div class="about-card-show card">
+              <h3>AWS - Cloud computing</h3>
+              <br />
+              <p>
+                Ik gebruik cloud computing om mijn applicaties te hosten en
+                extra functionaliteiten toe te voegen. Zo maak ik microservices
+                om bepaalde functies van een applicatie te isoleren.
+              </p>
             </div>
-        </section>
-        <section id="about" class="about">
-            <div class="about-body">
-                <div class="about-top">
-                    <h1 class=" about-text-top cover-section">Over</h1>
-                    <br />
-                    <br />
-                    <br />
-                    <p class="about-text-top"><span>Hallo</span>, ik ben <span>Alkin</span> en ik ben een
-                        <span>ontwikkelaar</span> uit <span>Nieuw-Vennep.</span>
-                        Ik programmeer al bijna 3 jaar als <span>hobbyist</span>.
-                        Ik begon met <span>webontwikkeling</span> in 2019 waarbij ik <span>HTML</span> en <span>CSS
-                        </span>
-                        begon te mengen om <span>websites</span> te creëren. Paar jaar verder
-                        en ik ben trots om mijzelf een <span>full-stack developer</span> te erkennen.
-                    </p>
-                    <br />
-                    <br />
-                    <br />
-                    <p class="about-text-top">Mijn doel als ontwikkelaar is om het beste product naar buiten te brengen
-                        met wensen van de klant als uitgangspunt.</p>
-
-                    <br />
-                    <p class="about-text-top">
-                        Ik doe dit door de meest moderne web-technieken te gebruiken.
-                        Van websites maken to servers opzetten - ik doe het allemaal.
-                        Voor front-end gebruik ik React en als back-end gebruik ik NodeJS.
-                    </p>
-                </div>
-                <fieldset class=" about-container-stack stack-container">
-                    <legend align="center">
-                        <p>Mijn stack</p>
-                    </legend>
-                    <div class="about-card-show card">
-                        <h3>AWS - Cloud computing</h3>
-                        <br />
-                        <p>
-                            Ik gebruik cloud computing om mijn applicaties te hosten en
-                            extra functionaliteiten toe te voegen. Zo maak ik microservices om bepaalde functies van een
-                            applicatie te isoleren.
-                        </p>
-                    </div>
-                    <div class="about-card-show card">
-                        <h3>NodeJS - Back-end</h3>
-                        <br />
-                        <p>
-                            Lichtgewicht, makkelijk, en doeltreffend. NodeJS is mijn go-to
-                            programmeertaal om lichtgewichte applicaties te maken. Ik
-                            gebruik NodeJS om front-end te verbinden met de back-end.
-                        </p>
-                    </div>
-                    <div class="about-card-show card">
-                        <h3>React - Front-end</h3>
-                        <br />
-                        <p>
-                            React en NodeJS zijn de perfecte combo om een full-stack
-                            applicatie te maken. Ik vind React de beste front-end framework om de hergebruikbare
-                            componenten.
-                        </p>
-                    </div>
-                    <div class="about-card-show card">
-                        <h3>Sass - Styling 💅</h3>
-                        <br />
-                        <p>
-                            Ik kies SASS ofwel sassy css 😏 boven normale css om de extra kenmerken die het aanbiedt.
-                        </p>
-                    </div>
-                </fieldset>
+            <div class="about-card-show card">
+              <h3>NodeJS - Back-end</h3>
+              <br />
+              <p>
+                Lichtgewicht, makkelijk, en doeltreffend. NodeJS is mijn go-to
+                programmeertaal om lichtgewichte applicaties te maken. Ik
+                gebruik NodeJS om front-end te verbinden met de back-end.
+              </p>
             </div>
-
-        </section>
-        <section id="project" class="project">
-
-            <div class="project-container">
-
-                <h1 class="proj-cover cover-section">Projecten</h1>
-                <div class="project-name">
-                    <a target="_blank" href="https://ik.imagekit.io/9r9n2dtpgk/alktunes_demo__pJgNz1Yk.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1664215211656" class="proj-link" style="text-decoration: underline;">
-                        <h2>Alktunes</h2>
-                    </a>
-                </div>
-                <div id="alktunes" class="cover-show cover">
-                    <img class="img-cover cover-alktunes" src="./assets/cover/alktunes/cover-alktunes-desktop.jpg" />
-                    <div class="text-cover">
-                        <div class="cover-text anim-cover-text">
-                            <p> Alktunes is een full-stack applicatie gemaakt met React en NodeJS dat gehost wordt op
-                                AWS. <br /> <br /> MySQL wordt gebruik gemaakt om gebruikersgegevens op te slaan.
-                                Alktunes maakt gebruik van een NoSQL database om playlisten te creëren en te
-                                verwijderen. In deze playlisten kunnen ook nummers toegoevoegd en verwijderd worden.
-                                <br /> <br /> Om de 3 uur gaat een Lambda functie af waardoor de inhoud in de Trending
-                                en Feature sectie worden ververst.
-                                De applicatie heeft in totaal 87 nummers met 5 albums van 5 artiesten.
-                            </p>
-
-                        </div>
-                        <div class="cover-links">
-                            <a target="_blank" href="https://github.com/dcnxx1/alktunes/tree/main1"
-                                class="cover-link git-front">
-                                <img src="./assets/icons/githtml.png" class="cover-link-img" />
-                                <p>Front-end Source</p>
-                            </a>
-                            <a target="_blank" href="https://github.com/dcnxx1/alktunes_server"
-                                class="cover-link git-server">
-                                <img src="./assets/icons/gitserver.png" class="cover-link-img" />
-                                <p>Back-end Source</p>
-                            </a>
-                            <a target="_blank" href="https://ik.imagekit.io/9r9n2dtpgk/alktunes_demo__pJgNz1Yk.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1664215211656" class="cover-link git-front">
-                                <img src="./assets/icons/live.png" class="cover-link-img" />
-                                <p>Demo video</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="mobile-cover" data-cover="alktunes">
-                        <div class="three-dots">
-                            <div class="dots"></div>
-                            <div class="dots"></div>
-                            <div class="dots"></div>
-                        </div>
-                        <p>Meer</p>
-                    </div>
-
-                </div>
-                <div class="project-name">
-                    <a target="_blank" href="https://shopee-frontend.herokuapp.com/" class="proj-link" style="text-decoration: underline;">
-                        <h2>Shopee.com</h2>
-                    </a>
-                </div>
-                <div id="shopee" class="cover">
-
-                    <div class="text-cover cover-shopee">
-                        <div class="cover-text anim-cover-text">
-                            <p> Shopeee is een full-stack e-commerce site gemaakt met React en NodeJS dat gehost wordt
-                                op Heroku. Alle artikelen worden opgehaald van een MySQL database.
-                                Artikelen kunnen worden opgeslagen en de hoeveelheid van een artikel kan worden verhoogd
-                                of verlaagd. Na het bestellen van alle artikelen wordt de gebruiker doorgewezen
-                                naar een pagina waar hen bestelde artikelen in een factuur kunnen worden teruggevonden.
-                                In de factuur staat wat de gebruiker heeft besteld, het aantal artikelen,
-                                de prijs voor elke artikel, de BTW en het totaalbedrag. </p>
-
-                        </div>
-                        <div class="cover-links">
-                            <a target="_blank" href="https://github.com/dcnxx1/shopee_frontend"
-                                class="cover-link git-front">
-                                <img src="./assets/icons/githtml.png" class="cover-link-img" />
-                                <p>Front-end Source</p>
-                            </a>
-                            <a target="_blank" href="https://github.com/dcnxx1/shopee-backend"
-                                class="cover-link git-server">
-                                <img src="./assets/icons/gitserver.png" class="cover-link-img" />
-                                <p>Back-end Source</p>
-                            </a>
-                            <a target="_blank" href="https://shopee-frontend.herokuapp.com/"
-                                class="cover-link git-front">
-                                <img src="./assets/icons/live.png" class="cover-link-img" />
-                                <p>Website</p>
-                            </a>
-                        </div>
-                    </div>
-                    <img class="img-cover cover-shopee" src="./assets/cover/shopee/cover-shopee-desktop.jpg" />
-                    <div class="mobile-cover" data-cover="shopee">
-                        <div class="three-dots">
-                            <div class="dots"></div>
-                            <div class="dots"></div>
-                            <div class="dots"></div>
-                        </div>
-                        <p>Meer</p>
-                    </div>
-                </div>
-                <div class="project-name">
-                    <a target="_blank" href="https://qrcode-frnt.herokuapp.com/" class="proj-link" style="text-decoration: underline;">
-                        <h2>QRCode.com</h2>
-                    </a>
-                </div>
-                <div id="qrcode" class="cover">
-                    <img class="img-cover cover-qrcode" src="./assets/cover/qrcode/cover-desktop-qrcode.jpg" />
-                    <div class="text-cover">
-                        <div class="cover-text anim-cover-text">
-                            <p> Verborgen informatie, links naar andere websites of een SMS versturen via een foto met
-                                zwart-witte puntjes, kunnen alleen de slimste
-                                techneuten hebben bedacht. Op mijn website kun je tussen een V-card, SMS, Text en een
-                                E-mail QRCode kiezen en jouw eigen QRCode genereren.
-                            </p>
-
-                        </div>
-                        <div class="cover-links">
-                            <a target="_blank" href="https://github.com/dcnxx1/qrCode" class="cover-link git-front">
-                                <img src="./assets/icons/githtml.png" class="cover-link-img" />
-                                <p>Front-end Source</p>
-                            </a>
-                            <a target="_blank" href="https://github.com/dcnxx1/qrcode-backend"
-                                class="cover-link git-server">
-                                <img src="./assets/icons/gitserver.png" class="cover-link-img" />
-                                <p>Back-end Source</p>
-                            </a>
-                            <a target="_blank" href="https://qrcode-frnt.herokuapp.com/" class="cover-link git-front">
-                                <img src="./assets/icons/live.png" class="cover-link-img" />
-                                <p>Website</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="mobile-cover" data-cover="qrcode">
-                        <div class="three-dots">
-                            <div class="dots"></div>
-                            <div class="dots"></div>
-                            <div class="dots"></div>
-                        </div>
-                        <p>Meer</p>
-                    </div>
-                </div>
-
+            <div class="about-card-show card">
+              <h3>React - Front-end</h3>
+              <br />
+              <p>
+                React en NodeJS zijn de perfecte combo om een full-stack
+                applicatie te maken. Ik vind React de beste front-end framework
+                om de hergebruikbare componenten.
+              </p>
             </div>
-        </section>
-        <section id="activity" class=" activity">
-            <div class="show-activity activity-container">
-                <h1 class="activity-show-cover cover-section">Activiteit</h1>
-                <div class="activity-body">
-                    <img class="activity-img" src="./assets/cover/loransbarber.jpg" />
-                    <h2 class="activity-txt">Momenteel ben ik actief bezig om een locale kapper in Nieuw-Vennep van een
-                        website te voorzien</h2>
-                </div>
+            <div class="about-card-show card">
+              <h3>Sass - Styling 💅</h3>
+              <br />
+              <p>
+                Ik kies SASS ofwel sassy css 😏 boven normale css om de extra
+                kenmerken die het aanbiedt.
+              </p>
             </div>
-        </section>
-
+          </fieldset>
+        </div>
+      </section>
+      <section id="project" class="project">
+        <div class="project-container">
+          <h1 class="proj-cover cover-section">Projecten</h1>
+          <div class="project-name">
+            <a
+              target="_blank"
+              href="https://ik.imagekit.io/9r9n2dtpgk/alktunes_demo__pJgNz1Yk.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1664215211656"
+              class="proj-link"
+              style="text-decoration: underline"
+            >
+              <h2>Alktunes</h2>
+            </a>
+          </div>
+          <div id="alktunes" class="cover-show cover">
+            <img
+              class="img-cover cover-alktunes"
+              src="./assets/cover/alktunes/cover-alktunes-desktop.jpg"
+            />
+            <div class="text-cover">
+              <div class="cover-text anim-cover-text">
+                <p>
+                  Alktunes is een full-stack applicatie gemaakt met React en
+                  NodeJS dat gehost wordt op AWS. <br />
+                  <br />
+                  MySQL wordt gebruik gemaakt om gebruikersgegevens op te slaan.
+                  Alktunes maakt gebruik van een NoSQL database om playlisten te
+                  creëren en te verwijderen. In deze playlisten kunnen ook
+                  nummers toegoevoegd en verwijderd worden. <br />
+                  <br />
+                  Om de 3 uur gaat een Lambda functie af waardoor de inhoud in
+                  de Trending en Feature sectie worden ververst. De applicatie
+                  heeft in totaal 87 nummers met 5 albums van 5 artiesten.
+                </p>
+              </div>
+              <div class="cover-links">
+                <a
+                  target="_blank"
+                  href="https://github.com/dcnxx1/alktunes/tree/main1"
+                  class="cover-link git-front"
+                >
+                  <img
+                    src="./assets/icons/githtml.png"
+                    class="cover-link-img"
+                  />
+                  <p>Front-end Source</p>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://github.com/dcnxx1/alktunes_server"
+                  class="cover-link git-server"
+                >
+                  <img
+                    src="./assets/icons/gitserver.png"
+                    class="cover-link-img"
+                  />
+                  <p>Back-end Source</p>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://ik.imagekit.io/9r9n2dtpgk/alktunes_demo__pJgNz1Yk.mp4?ik-sdk-version=javascript-1.4.3&updatedAt=1664215211656"
+                  class="cover-link git-front"
+                >
+                  <img src="./assets/icons/live.png" class="cover-link-img" />
+                  <p>Demo video</p>
+                </a>
+              </div>
+            </div>
+            <div class="mobile-cover" data-cover="alktunes">
+              <div class="three-dots">
+                <div class="dots"></div>
+                <div class="dots"></div>
+                <div class="dots"></div>
+              </div>
+              <p>Meer</p>
+            </div>
+          </div>
+          <div class="project-name">
+        
+              <h2>Shopee.com</h2>
+         
+          </div>
+          <div id="shopee" class="cover">
+            <div class="text-cover cover-shopee">
+              <div class="cover-text anim-cover-text">
+                <p>
+                  Shopeee is een full-stack e-commerce site gemaakt met React en
+                  NodeJS dat gehost wordt op Heroku. Alle artikelen worden
+                  opgehaald van een MySQL database. Artikelen kunnen worden
+                  opgeslagen en de hoeveelheid van een artikel kan worden
+                  verhoogd of verlaagd. Na het bestellen van alle artikelen
+                  wordt de gebruiker doorgewezen naar een pagina waar hen
+                  bestelde artikelen in een factuur kunnen worden teruggevonden.
+                  In de factuur staat wat de gebruiker heeft besteld, het aantal
+                  artikelen, de prijs voor elke artikel, de BTW en het
+                  totaalbedrag.
+                </p>
+              </div>
+              <div class="cover-links">
+                <a
+                  target="_blank"
+                  href="https://github.com/dcnxx1/shopee_frontend"
+                  class="cover-link git-front"
+                >
+                  <img
+                    src="./assets/icons/githtml.png"
+                    class="cover-link-img"
+                  />
+                  <p>Front-end Source</p>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://github.com/dcnxx1/shopee-backend"
+                  class="cover-link git-server"
+                >
+                  <img
+                    src="./assets/icons/gitserver.png"
+                    class="cover-link-img"
+                  />
+                  <p>Back-end Source</p>
+                </a>
+                
+                </a>
+              </div>
+            </div>
+            <img
+              class="img-cover cover-shopee"
+              src="./assets/cover/shopee/cover-shopee-desktop.jpg"
+            />
+            <div class="mobile-cover" data-cover="shopee">
+              <div class="three-dots">
+                <div class="dots"></div>
+                <div class="dots"></div>
+                <div class="dots"></div>
+              </div>
+              <p>Meer</p>
+            </div>
+          </div>
+          <div class="project-name">
+            <!-- <a
+              target="_blank"
+              href="https://qrcode-frnt.herokuapp.com/"
+              class="proj-link"
+              style="text-decoration: underline"
+            > -->
+              <h2>QRCode.com</h2>
+            <!-- </a> -->
+          </div>
+          <div id="qrcode" class="cover">
+            <img
+              class="img-cover cover-qrcode"
+              src="./assets/cover/qrcode/cover-desktop-qrcode.jpg"
+            />
+            <div class="text-cover">
+              <div class="cover-text anim-cover-text">
+                <p>
+                  Verborgen informatie, links naar andere websites of een SMS
+                  versturen via een foto met zwart-witte puntjes, kunnen alleen
+                  de slimste techneuten hebben bedacht. Op mijn website kun je
+                  tussen een V-card, SMS, Text en een E-mail QRCode kiezen en
+                  jouw eigen QRCode genereren.
+                </p>
+              </div>
+              <div class="cover-links">
+                <a
+                  target="_blank"
+                  href="https://github.com/dcnxx1/qrCode"
+                  class="cover-link git-front"
+                >
+                  <img
+                    src="./assets/icons/githtml.png"
+                    class="cover-link-img"
+                  />
+                  <p>Front-end Source</p>
+                </a>
+                <a
+                  target="_blank"
+                  href="https://github.com/dcnxx1/qrcode-backend"
+                  class="cover-link git-server"
+                >
+                  <img
+                    src="./assets/icons/gitserver.png"
+                    class="cover-link-img"
+                  />
+                  <p>Back-end Source</p>
+                </a>
+              
+              </div>
+            </div>
+            <div class="mobile-cover" data-cover="qrcode">
+              <div class="three-dots">
+                <div class="dots"></div>
+                <div class="dots"></div>
+                <div class="dots"></div>
+              </div>
+              <p>Meer</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
-        <a target="_blank" href="https://github.com/dcnxx1">
-            <img src="./assets/icons/github-inactive.png" />
-        </a>
-        <div class="dot"></div>
-        <a target="_blank" href="mailto:alkisali1@hotmail.com">
-            <img src="./assets/icons/email.png" />
-        </a>
-        <div class="dot"></div>
-        <a target="_blank" href="http://linkedin.alkin-sali.site">
-            <img src="./assets/icons/linkedin-logo.png" />
-        </a>
+      <a target="_blank" href="https://github.com/dcnxx1">
+        <img src="./assets/icons/github-inactive.png" />
+      </a>
+      <div class="dot"></div>
+      <a target="_blank" href="mailto:alkisali1@hotmail.com">
+        <img src="./assets/icons/email.png" />
+      </a>
+      <div class="dot"></div>
+      <a target="_blank" href="https://www.linkedin.com/in/alkinn/">
+        <img src="./assets/icons/linkedin-logo.png" />
+      </a>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollToPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.15/dist/js/splide.min.js"></script>
-</body>
-
+  </body>
 </html>
